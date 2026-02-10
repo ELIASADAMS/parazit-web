@@ -1,0 +1,25 @@
+{
+  "exhibitions": [
+    {
+      "id": "the-act",
+      "year": "2010",
+      "title": "THE ACT",
+      "description": "Performance installation in corridor space (1.26×5.75×3.1m).",
+      "images": [
+        "images/the-act-1.jpg",
+        "images/the-act-2.jpg",
+        "images/the-act-3.jpg"
+      ]
+    },
+    {
+      "id": "venice-2009",
+      "year": "2009",
+      "title": "Venice Biennale",
+      "description": "PARAZIT Pavilion at Venice Architecture Biennale.",
+      "images": [
+        "images/venice-1.jpg",
+        "images/venice-2.jpg"
+      ]
+    }
+  ]
+}

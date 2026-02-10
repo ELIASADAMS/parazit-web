@@ -1,0 +1,25 @@
+{
+  "artists": [
+    {
+      "id": "kozin",
+      "name": "Vladimir Kozin",
+      "role": "Co-editor",
+      "bio": "Co-editor of PARAZIT collective. Specializes in trash assemblages and corridor performances using found materials from St. Petersburg streets.",
+      "portrait": "images/kozin-portrait.jpg"
+    },
+    {
+      "id": "motolyanets",
+      "name": "Semyon Motolyanets",
+      "role": "Performance Artist",
+      "bio": "Performance artist and collective organizer. Known for curating biweekly exhibitions in the tight corridor space.",
+      "portrait": "images/motolyanets-portrait.jpg"
+    },
+    {
+      "id": "panin",
+      "name": "Igor Panin",
+      "role": "Book Designer",
+      "bio": "Book designer and installation artist. Created PARAZIT publication (ISBN 978-5-7187-0999-5) documenting 10+ years of collective work.",
+      "portrait": "images/panin-portrait.jpg"
+    }
+  ]
+}
