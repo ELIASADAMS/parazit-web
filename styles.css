@@ -482,7 +482,7 @@ th {
 
 /* === FOOTER === */
 .site-footer {
-    background: var(--beige);
+    background: var(--white);
     padding: 80px 24px 48px;
     border-top: 1px solid #eee;
 }
@@ -504,7 +504,7 @@ th {
     font-size: 16px;
     margin-bottom: 16px;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.0em;
     color: var(--black);
 }
 
