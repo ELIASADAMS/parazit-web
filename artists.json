@@ -20,6 +20,20 @@
       "role": "Book Designer",
       "bio": "Book designer and installation artist. Created PARAZIT publication (ISBN 978-5-7187-0999-5) documenting 10+ years of collective work.",
       "portrait": "images/panin-portrait.jpg"
-    }
+    },
+    {
+      "id": "aksinya",
+      "name": "Ксения Макаренко",
+      "role": "Book Designer",
+      "bio": "Book designer and installation artist. Created PARAZIT publication (ISBN 978-5-7187-0999-5) documenting 10+ years of collective work.",
+      "portrait": "images/panin-portrait.jpg"
+    },
+    {
+      "id": "ash",
+      "name": "Александр Шишкин-Хокусай",
+      "role": "Book Designer",
+      "bio": "Book designer and installation artist. Created PARAZIT publication (ISBN 978-5-7187-0999-5) documenting 10+ years of collective work.",
+      "portrait": "images/panin-portrait.jpg"
+    },
   ]
 }

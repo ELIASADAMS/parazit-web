@@ -135,9 +135,6 @@ function populateExhibitionGrid() {
     }
 }
 
-
-
-
 // === MODAL CREATION ===
 function createArtistModal(artistId) {
     const data = artistData[artistId];
