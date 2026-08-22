@@ -23,9 +23,7 @@
       <button class="search-toggle" type="button" aria-label="Open search">SEARCH</button>
     </header>
 
-    <div class="system-strip" aria-label="Archive status">
-      <div class="ticker" id="systemTicker">PARAZIT DATABASE • ARCHIVE ACTIVE • ST.PETERSBURG • EST. 2000 •</div>
-    </div>
+    <div class="system-strip" aria-label="Archive status"><div class="ticker" id="systemTicker">PARAZIT DATABASE • ARCHIVE ACTIVE • ST.PETERSBURG • EST. 2000 •</div></div>
 
     <main id="app" tabindex="-1">
       <section class="view view-home" data-view="home">
@@ -34,98 +32,67 @@
             <div class="module-code">PZT-ARC-000 / SYSTEM</div>
             <h1>PARAZIT</h1>
             <p class="hero-kicker">DIGITAL ARCHIVE / GALLERY / INDEX</p>
-            <p class="hero-copy">Художественное объединение, галерея и непрерывный выставочный проект. Этот сайт собирает историю, людей, выставки, работы и документы PARAZIT в единую систему.</p>
+            <p class="hero-copy">Художественное объединение, галерея и непрерывный выставочный проект. Архив собирает людей, выставки, произведения, места, документы и версии сайта в одну связанную систему.</p>
           </div>
           <div class="feature-block module">
             <div class="module-head"><span>FEATURED.RECORD</span><span id="featureId">—</span></div>
             <div class="feature-image-wrap"><img id="featureImage" src="images/venice-1.jpg" alt="PARAZIT archive image"></div>
-            <div class="feature-meta"><strong id="featureTitle">VENICE BIENNALE</strong><span id="featureYear">2009</span></div>
+            <div class="feature-meta"><strong id="featureTitle">PARAZIT</strong><span id="featureYear">—</span></div>
           </div>
           <div class="module info-module">
             <div class="module-head"><span>SYS.INFO</span><span>ON</span></div>
-            <p>PARAZIT работает как художественное объединение и выставочная система. Архив фиксирует известные события и постепенно дополняется первичными документами.</p>
+            <p>Каждый объект может быть связан с художниками, выставками, произведениями, площадками и документами. Источники и степень уверенности сохраняются вместе с записью.</p>
             <div class="stats" id="stats"></div>
           </div>
           <div class="module roster-module">
-            <div class="module-head"><span>ROSTER.ACTV</span><span id="rosterCount">00</span></div>
+            <div class="module-head"><span>ROSTER.DOCUMENTED</span><span id="rosterCount">00</span></div>
             <ol id="roster" class="roster"></ol>
           </div>
         </div>
-
-        <section class="home-section">
-          <div class="section-title"><span>LATEST.EXHIBITIONS</span><a href="#archive" data-route="archive">OPEN ARCHIVE →</a></div>
-          <div class="record-grid" id="latestExhibitions"></div>
-        </section>
-
-        <section class="home-section">
-          <div class="section-title"><span>ARCHIVE.TIMELINE</span><a href="#archive" data-route="archive">FULL TIMELINE →</a></div>
-          <div class="timeline-mini" id="timelineMini"></div>
-        </section>
+        <section class="home-section"><div class="section-title"><span>LATEST.EXHIBITIONS</span><a href="#archive" data-route="archive">OPEN ARCHIVE →</a></div><div class="record-grid" id="latestExhibitions"></div></section>
+        <section class="home-section"><div class="section-title"><span>ARCHIVE.TIMELINE</span><a href="#archive" data-route="archive">FULL TIMELINE →</a></div><div class="timeline-mini" id="timelineMini"></div></section>
       </section>
 
       <section class="view" data-view="archive">
-        <div class="page-header">
-          <div><span class="eyebrow">PZT-ARC-000</span><h2>ARCHIVE</h2></div>
-          <p>Хронология и каталог событий PARAZIT. Записи разделены на подтверждённые данные и материалы, требующие дальнейшей проверки.</p>
-        </div>
-        <div class="archive-toolbar">
-          <label>YEAR <select id="yearFilter"><option value="all">ALL</option></select></label>
-          <label>TYPE <select id="typeFilter"><option value="all">ALL</option><option value="exhibition">EXHIBITION</option><option value="project">PROJECT</option><option value="gallery">GALLERY</option><option value="venue">VENUE</option><option value="origin">ORIGIN</option></select></label>
-          <label class="search-field">QUERY <input id="archiveQuery" type="search" placeholder="search archive..."></label>
-        </div>
+        <div class="page-header"><div><span class="eyebrow">PZT-ARC-000</span><h2>ARCHIVE</h2></div><p>Хронология и события PARAZIT. Непроверенные записи остаются в системе, но явно помечаются как legacy.</p></div>
+        <div class="archive-toolbar"><label>YEAR <select id="yearFilter"><option value="all">ALL</option></select></label><label>TYPE <select id="typeFilter"><option value="all">ALL</option><option value="exhibition">EXHIBITION</option><option value="external project">PROJECT</option><option value="project">PROJECT</option></select></label><label class="search-field">QUERY <input id="archiveQuery" type="search" placeholder="search archive..."></label></div>
         <div id="archiveResults" class="archive-list"></div>
       </section>
 
       <section class="view" data-view="gallery">
-        <div class="page-header">
-          <div><span class="eyebrow">IMAGE INDEX</span><h2>GALLERY</h2></div>
-          <p>Изображения, связанные с архивными записями PARAZIT. Выберите запись для просмотра контекста.</p>
-        </div>
+        <div class="page-header"><div><span class="eyebrow">IMAGE INDEX</span><h2>GALLERY</h2></div><p>Визуальный слой архива. Изображения остаются связаны с конкретными записями, а не существуют как отдельная неразмеченная фотопапка.</p></div>
         <div id="galleryGrid" class="gallery-grid"></div>
       </section>
 
       <section class="view" data-view="index">
-        <div class="page-header">
-          <div><span class="eyebrow">PZT-INDEX</span><h2>INDEX</h2></div>
-          <p>Люди и участники, связанные с архивом PARAZIT.</p>
+        <div class="page-header"><div><span class="eyebrow">PZT-INDEX</span><h2>INDEX</h2></div><p>Полный индекс сущностей: художники, события, произведения, документы, площадки и исторические версии сайта.</p></div>
+        <div class="index-tabs">
+          <button class="index-tab active" data-index-tab="artists">ARTISTS</button>
+          <button class="index-tab" data-index-tab="exhibitions">EXHIBITIONS</button>
+          <button class="index-tab" data-index-tab="artworks">WORKS</button>
+          <button class="index-tab" data-index-tab="documents">DOCUMENTS</button>
+          <button class="index-tab" data-index-tab="venues">VENUES</button>
+          <button class="index-tab" data-index-tab="snapshots">SNAPSHOTS</button>
         </div>
-        <div class="index-tabs"><button class="index-tab active" data-index-tab="artists">ARTISTS</button><button class="index-tab" data-index-tab="exhibitions">EXHIBITIONS</button></div>
         <div id="indexContent"></div>
       </section>
 
       <section class="view" data-view="about">
-        <div class="page-header">
-          <div><span class="eyebrow">PZT-SYS</span><h2>ABOUT</h2></div>
-          <p>PARAZIT как художественная система.</p>
-        </div>
+        <div class="page-header"><div><span class="eyebrow">PZT-SYS</span><h2>ABOUT</h2></div><p>PARAZIT как художественная система и объект архивирования.</p></div>
         <div class="about-grid">
-          <article class="module text-module"><span class="eyebrow">01 / PARAZIT</span><h3>ИСКУССТВО В МАССЫ</h3><p>PARAZIT возник как проект, связанный с несколькими художественными институциями и программой «Искусство в массы». История объединения включает галерейную деятельность, внешние проекты, ярмарки и самостоятельное пространство.</p></article>
-          <article class="module text-module"><span class="eyebrow">02 / NII PARAZIT</span><h3>РЕНТГЕНА, 4</h3><p>С 2022 года у PARAZIT есть собственное пространство в Санкт-Петербурге — НИИ PARAZIT. Оно продолжает логику выставочной лаборатории и постоянной смены проектов.</p></article>
-          <article class="module text-module"><span class="eyebrow">03 / ARCHIVE</span><h3>WORK IN PROGRESS</h3><p>Этот цифровой архив не пытается заполнить пробелы выдуманными фактами. Недостающие даты, атрибуции и документы должны отмечаться как неизвестные и постепенно уточняться.</p></article>
-          <article class="module text-module"><span class="eyebrow">04 / OLD SITE</span><h3>HISTORICAL WEBSITE</h3><p>Предыдущая версия сайта PARAZIT рассматривается как самостоятельный исторический документ и будет подключена к архиву отдельным разделом.</p><a class="external-link" href="https://web.archive.org/web/20161013035344/http://parazzzit.spb.ru/history.php" target="_blank" rel="noopener">WAYBACK / 2016 →</a></article>
+          <article class="module text-module"><span class="eyebrow">01 / PARAZIT</span><h3>ART / INSTITUTION / PARASITE</h3><p>Архив не сводит PARAZIT к одному составу или одному адресу. Он фиксирует сеть людей, институций, выставок, ярмарок, работ и мест, через которые существовал проект.</p></article>
+          <article class="module text-module"><span class="eyebrow">02 / RELATIONAL MODEL</span><h3>EVERYTHING CONNECTS</h3><p>Artists ↔ Works ↔ Exhibitions ↔ Venues ↔ Documents ↔ Snapshots. Связи хранятся отдельно в relations.json, чтобы одна запись могла участвовать в десятках контекстов без дублирования данных.</p></article>
+          <article class="module text-module"><span class="eyebrow">03 / PROVENANCE</span><h3>SOURCE FIRST</h3><p>У каждой документированной записи может быть sourceId. Степень уверенности отделена от факта существования записи: legacy не удаляется, но не маскируется под подтверждённую историю.</p></article>
+          <article class="module text-module"><span class="eyebrow">04 / OLD SITE</span><h3>WEBSITE AS ARTIFACT</h3><p>Исторический сайт PARAZIT сохранён как отдельный snapshot-объект. Современный интерфейс не должен переписывать его содержание или внешний вид.</p><a class="external-link" href="https://web.archive.org/web/20161013035344/http://parazzzit.spb.ru/history.php" target="_blank" rel="noopener">WAYBACK / 2016 →</a></article>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <span>PARAZIT / DIGITAL ARCHIVE</span><span id="footerStatus">ARCHIVE STATUS: ACTIVE</span><span>ST.PETERSBURG / RU</span>
-    </footer>
+    <footer class="footer"><span>PARAZIT / DIGITAL ARCHIVE</span><span id="footerStatus">ARCHIVE STATUS: ACTIVE</span><span>ST.PETERSBURG / RU</span></footer>
   </div>
 
-  <dialog id="searchDialog" class="search-dialog">
-    <form method="dialog" class="search-panel">
-      <button class="dialog-close" value="close" aria-label="Close">×</button>
-      <label for="globalSearch">SEARCH PARAZIT</label>
-      <input id="globalSearch" type="search" placeholder="artist / exhibition / year / place..." autofocus>
-      <div id="searchResults" class="search-results"></div>
-    </form>
-  </dialog>
-
-  <dialog id="recordDialog" class="record-dialog">
-    <button class="dialog-close" type="button" id="recordClose" aria-label="Close">×</button>
-    <div id="recordDetail"></div>
-  </dialog>
-
+  <dialog id="searchDialog" class="search-dialog"><form method="dialog" class="search-panel"><button class="dialog-close" value="close" aria-label="Close">×</button><label for="globalSearch">SEARCH PARAZIT</label><input id="globalSearch" type="search" placeholder="artist / work / exhibition / document / place..." autofocus><div id="searchResults" class="search-results"></div></form></dialog>
+  <dialog id="recordDialog" class="record-dialog"><button class="dialog-close" type="button" id="recordClose" aria-label="Close">×</button><div id="recordDetail"></div></dialog>
   <script src="script.js"></script>
 </body>
 </html>
