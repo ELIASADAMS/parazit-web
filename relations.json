@@ -1,0 +1,20 @@
+{
+  "relations": [
+    {"id":"rel-001","from":{"type":"artist","id":"kozin"},"relation":"participated-in","to":{"type":"exhibition","id":"exh-trained-spectator-2022"},"role":"artist","sourceIds":["src-gisich-2022"]},
+    {"id":"rel-002","from":{"type":"artist","id":"motolyanets"},"relation":"curated","to":{"type":"exhibition","id":"exh-trained-spectator-2022"},"role":"curator","sourceIds":["src-gisich-2022"]},
+    {"id":"rel-003","from":{"type":"artist","id":"timur-musaev-kagan"},"relation":"curated","to":{"type":"exhibition","id":"exh-trained-spectator-2022"},"role":"curator","sourceIds":["src-gisich-2022"]},
+    {"id":"rel-004","from":{"type":"exhibition","id":"exh-trained-spectator-2022"},"relation":"held-at","to":{"type":"venue","id":"venue-gisich-projects"},"sourceIds":["src-gisich-2022"]},
+    {"id":"rel-005","from":{"type":"artist","id":"kozin"},"relation":"participated-in","to":{"type":"exhibition","id":"exh-venice-salvation-2014"},"role":"artist","sourceIds":["src-gisich-2014"]},
+    {"id":"rel-006","from":{"type":"artist","id":"morozov"},"relation":"created","to":{"type":"artwork","id":"venetian-correctional-camp"},"sourceIds":["src-supermarket-2015"]},
+    {"id":"rel-007","from":{"type":"artwork","id":"venetian-correctional-camp"},"relation":"shown-in","to":{"type":"exhibition","id":"exh-venice-salvation-2014"},"sourceIds":["src-supermarket-2015"]},
+    {"id":"rel-008","from":{"type":"exhibition","id":"exh-venice-salvation-2014"},"relation":"held-at","to":{"type":"venue","id":"venue-gisich-gallery"},"sourceIds":["src-gisich-2014"]},
+    {"id":"rel-009","from":{"type":"artist","id":"motolyanets"},"relation":"created","to":{"type":"artwork","id":"sweet-column-dial-of-the-night"},"sourceIds":["src-cosmoscow-2025"]},
+    {"id":"rel-010","from":{"type":"artwork","id":"sweet-column-dial-of-the-night"},"relation":"represented-by","to":{"type":"institution","id":"parazit"},"sourceIds":["src-cosmoscow-2025"]},
+    {"id":"rel-011","from":{"type":"exhibition","id":"exh-black-envy-2014"},"relation":"held-at","to":{"type":"venue","id":"venue-borey"},"sourceIds":["src-borey-2014"]},
+    {"id":"rel-012","from":{"type":"exhibition","id":"exh-cementa-2014"},"relation":"held-at","to":{"type":"venue","id":"venue-borey"},"sourceIds":["src-borey-2014"]},
+    {"id":"rel-013","from":{"type":"exhibition","id":"exh-bad-works-2015"},"relation":"held-at","to":{"type":"venue","id":"venue-borey"},"sourceIds":["src-borey-2015"]},
+    {"id":"rel-014","from":{"type":"exhibition","id":"exh-trained-spectator-2022"},"relation":"documented-by","to":{"type":"document","id":"doc-gisich-trained-spectator-2022"},"sourceIds":["src-gisich-2022"]},
+    {"id":"rel-015","from":{"type":"exhibition","id":"exh-venice-salvation-2014"},"relation":"documented-by","to":{"type":"document","id":"doc-gisich-salvation-2014"},"sourceIds":["src-gisich-2014"]},
+    {"id":"rel-016","from":{"type":"snapshot","id":"snapshot-2016"},"relation":"documents","to":{"type":"institution","id":"parazit"},"sourceIds":["src-wayback-2016"]}
+  ]
+}
