@@ -1,5 +1,7 @@
 {
   "sources": [
+    {"id":"src-parazit-group","title":"PARAZIT / official website","url":"https://parazit.group/","type":"official website","accessed":"2026-08-22"},
+    {"id":"src-parazit-telegram","title":"Паразит/Parazit / official Telegram channel","url":"https://t.me/PARAZIT_Group","type":"official social archive","accessed":"2026-08-22"},
     {"id":"src-wayback-2016","title":"Wayback Machine / PARAZIT history.php","url":"https://web.archive.org/web/20161013035344/http://parazzzit.spb.ru/history.php","type":"web archive","accessed":"2026-08-22"},
     {"id":"src-gisich-2014","title":"Marina Gisich Gallery / VENICE SALVATION 2014","url":"https://www.shop.gisich.com/en/exhibitions/341/","type":"institutional exhibition record","accessed":"2026-08-22"},
     {"id":"src-gisich-2022","title":"Marina Gisich / PARAZIT Group. SEARCHING FOR THE TRAINED SPECTATOR","url":"https://www.gisich.com/en/viewing-rooms/parazit22/","type":"institutional exhibition record","accessed":"2026-08-22"},
