@@ -1,0 +1,16 @@
+{
+  "venues": [
+    {"id":"venue-borey","archiveId":"PZT-VEN-001","name":"Арт-центр «Борей»","nameLatin":"Borey Art Centre","city":"Санкт-Петербург","country":"Россия","address":"Литейный проспект, 58","type":"gallery / host institution","sourceIds":["src-gisich-2014","src-supermarket-2015"],"confidence":"documented"},
+    {"id":"venue-nii-parazit","archiveId":"PZT-VEN-002","name":"НИИ PARAZIT","nameLatin":"NII PARAZIT","city":"Санкт-Петербург","country":"Россия","address":"ул. Рентгена, 4","type":"PARAZIT space","activeFrom":2022,"sourceIds":["src-teodorus","src-cosmoscow-2025"],"confidence":"documented"},
+    {"id":"venue-gisich-gallery","archiveId":"PZT-VEN-003","name":"Marina Gisich Gallery","nameLatin":"Marina Gisich Gallery","city":"Санкт-Петербург","country":"Россия","address":"наб. реки Фонтанки, 121","type":"gallery","sourceIds":["src-gisich-2014"],"confidence":"documented"},
+    {"id":"venue-gisich-projects","archiveId":"PZT-VEN-004","name":"Marina Gisich Projects","nameLatin":"Marina Gisich Projects","city":"Санкт-Петербург","country":"Россия","address":"наб. реки Фонтанки, 121","type":"project space","sourceIds":["src-gisich-2022"],"confidence":"documented"},
+    {"id":"venue-eggz","archiveId":"PZT-VEN-005","name":"Eggz Gallery","city":"Санкт-Петербург","country":"Россия","type":"gallery","sourceIds":[],"confidence":"legacy"},
+    {"id":"venue-new-holland","archiveId":"PZT-VEN-006","name":"Новая Голландия","city":"Санкт-Петербург","country":"Россия","type":"cultural institution","sourceIds":[],"confidence":"legacy"},
+    {"id":"venue-tsarskoye-selo","archiveId":"PZT-VEN-007","name":"Государственный музей «Царскосельская коллекция»","city":"Пушкин","country":"Россия","type":"museum","sourceIds":[],"confidence":"legacy"},
+    {"id":"venue-cabaret-shum","archiveId":"PZT-VEN-008","name":"Кабаре Шум","city":"Санкт-Петербург","country":"Россия","type":"cultural venue","sourceIds":[],"confidence":"legacy"},
+    {"id":"venue-stankozavod","archiveId":"PZT-VEN-009","name":"Станкозавод","city":"Самара","country":"Россия","type":"cultural venue","sourceIds":[],"confidence":"legacy"},
+    {"id":"venue-nonconformist","archiveId":"PZT-VEN-010","name":"Музей нонконформистского искусства","city":"Санкт-Петербург","country":"Россия","type":"museum / gallery","sourceIds":[],"confidence":"legacy"},
+    {"id":"venue-vinzavod","archiveId":"PZT-VEN-011","name":"Винзавод","city":"Москва","country":"Россия","type":"art centre","sourceIds":[],"confidence":"legacy"},
+    {"id":"venue-venice-biennale","archiveId":"PZT-VEN-012","name":"Venice Biennale","city":"Венеция","country":"Италия","type":"biennale","sourceIds":[],"confidence":"legacy"}
+  ]
+}
