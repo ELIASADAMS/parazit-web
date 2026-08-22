@@ -1,17 +1,17 @@
 # PARAZIT Archive Schema
 
-The website is a static, version-controlled archive. JSON is the source of truth; the browser is a read-only presentation and exploration layer.
+PARAZIT is a static, version-controlled digital archive. JSON is the source of truth; the browser is a read-only presentation and exploration layer.
 
 ## Entity types
 
 - `artists.json` — people and artist groups.
-- `exhibitions.json` — exhibitions and external projects.
+- `exhibitions.json` — exhibitions, external projects and art fairs.
 - `artworks.json` — individual works.
-- `venues.json` — physical/institutional places.
-- `documents.json` — catalogues, exhibition pages, articles and other documentary evidence.
+- `venues.json` — physical and institutional places.
+- `documents.json` — catalogues, books, exhibition pages, press records and social-media documentation.
 - `snapshots.json` — historical website/interface captures.
 - `sources.json` — provenance registry.
-- `relations.json` — canonical graph of relationships.
+- `relations.json` — explicit canonical graph edges.
 - `archive.json` — archive metadata, timeline and editorial notes.
 
 ## IDs
@@ -20,6 +20,7 @@ Every entity gets a stable internal `id` and a human-facing archive identifier:
 
 - `PZT-ART-*` — artist
 - `PZT-EXH-*` — exhibition/project
+- `PZT-FAIR-*` — fair
 - `PZT-WRK-*` — artwork
 - `PZT-VEN-*` — venue
 - `PZT-DOC-*` — document
@@ -28,59 +29,79 @@ Every entity gets a stable internal `id` and a human-facing archive identifier:
 
 Do not recycle IDs.
 
-## Relationships
+## Relationship model
 
-`relations.json` uses directed edges:
+`relations.json` stores directed, source-aware structural edges:
 
 ```json
 {
-  "from": {"type": "artist", "id": "kozin"},
-  "relation": "participated-in",
-  "to": {"type": "exhibition", "id": "exh-trained-spectator-2022"},
-  "role": "artist",
+  "from": {"type": "exhibition", "id": "exh-trained-spectator-2022"},
+  "relation": "held-at",
+  "to": {"type": "venue", "id": "venue-gisich-projects"},
   "sourceIds": ["src-gisich-2022"]
 }
 ```
 
-Common relation verbs:
+Core relation verbs:
 
-- `participated-in`
-- `curated`
-- `created`
-- `held-at`
-- `shown-in`
-- `documented-by`
-- `represented-by`
-- `documents`
+- `participated-in` — artist → exhibition
+- `curated` — artist → exhibition
+- `created` — artist → artwork
+- `held-at` — exhibition → venue
+- `shown-in` — artwork → exhibition
+- `documented-by` — exhibition → document
+- `authored` — artist → document/publication
+- `presented-at` — document → exhibition
+- `documents` — snapshot → document
+- `represented-by` — artwork → institutional representation when independently documented
 
-Embedded ID arrays are allowed for editorial convenience, but `relations.json` is the canonical relationship graph.
+### Embedded relationship fields
+
+Exhibition records may contain `artistIds`, `curatorIds`, `venueId`, `artworkIds` and `documentIds` for efficient filtering and editorial clarity.
+
+These fields are **relationship declarations**, not unrelated duplicate metadata. The archive UI deterministically derives navigation edges from them in addition to explicit `relations.json` edges. Explicit edges are preferred whenever a relationship has an independent source or needs a role/provenance annotation.
+
+This hybrid model prevents the graph from becoming unnecessarily enormous while retaining one consistent relationship vocabulary.
+
+## Participation scope
+
+When a source says only “main roster of PARAZIT”, do not invent a list of individual participants. Use:
+
+```json
+"artistIds": [],
+"participantScope": "main roster of PARAZIT; individual participants not enumerated by source"
+```
+
+When a secondary source names only some participants, use the named IDs and mark the scope as `documented subset`.
 
 ## Provenance
 
 A record may have:
 
 - `sourceIds` — references into `sources.json`.
-- `confidence: documented | legacy`.
+- `confidence: documented | official listing | legacy`.
 - `notes` — editorial explanation.
+- `dateText` — original source wording when normalized dates are unsafe.
 
-`legacy` means the record came from an earlier draft or an unverified secondary record. It must remain visible until resolved, but the interface must never present it as equally verified.
+Never silently normalize an impossible or ambiguous historical date. Preserve the source wording and flag it for review. The current `FIX PRICE` record is an example: the official website prints “21–30 February 2025”, which is calendar-invalid and therefore remains as source text rather than being silently corrected.
 
 ## Historical websites
 
-The old PARAZIT website is represented as a `snapshot`, not as a rewritten modern page. The snapshot can point to an external Wayback capture and associated documentary records.
+The old PARAZIT website is represented as a `snapshot`, not as a rewritten modern page. A snapshot can point to a Wayback capture and associated documentary records.
 
 ## Editorial rule
 
-Never invent missing dates, participants, addresses, artwork attribution or documentation merely to make a record look complete. Prefer `null`, `legacy`, or an explicit note and add a source when the information is verified.
+Never invent missing dates, participants, addresses, artwork attribution or documentation merely to make a record look complete. Prefer `null`, an explicit scope statement, `legacy`, or a source-backed subset.
 
 ## Adding a new exhibition
 
 1. Add the exhibition to `exhibitions.json`.
 2. Reuse or create its venue in `venues.json`.
-3. Add artist participation relations in `relations.json`.
-4. Add works in `artworks.json` when individual works are documented.
-5. Add documentary evidence to `documents.json`.
-6. Register URLs/materials in `sources.json`.
-7. Connect the exhibition to its documents, venue and works.
+3. Add documented artist/curator IDs to the exhibition record.
+4. Add explicit structural relations to `relations.json` where useful or independently sourced.
+5. Add works in `artworks.json` when individual works are documented.
+6. Add documentary evidence to `documents.json`.
+7. Register URLs/materials in `sources.json`.
+8. Connect the exhibition to its venue, works and documents.
 
-The UI should then discover the record automatically without hard-coding it into `index.html`.
+The UI should discover the record automatically without hard-coding it into `index.html`.
