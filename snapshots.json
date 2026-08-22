@@ -1,0 +1,17 @@
+{
+  "snapshots": [
+    {
+      "id":"snapshot-2016",
+      "archiveId":"PZT-SNP-001",
+      "title":"PARAZIT / historical website",
+      "capturedAt":"2016-10-13",
+      "originalUrl":"http://parazzzit.spb.ru/history.php",
+      "archiveUrl":"https://web.archive.org/web/20161013035344/http://parazzzit.spb.ru/history.php",
+      "platform":"Wayback Machine",
+      "status":"external snapshot",
+      "notes":"Preserve this as a historical interface artifact. Do not replace it with a modernized transcription.",
+      "documentIds":["doc-wayback-2016"],
+      "sourceIds":["src-wayback-2016"]
+    }
+  ]
+}
