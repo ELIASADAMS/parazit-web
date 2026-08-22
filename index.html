@@ -1,321 +1,131 @@
-<!DOCTYPE html>
-<html lang="en">
-
+<!doctype html>
+<html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1">
-    <title>PARAZIT</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="PARAZIT — digital archive, gallery and index of the PARAZIT art group.">
+  <title>PARAZIT / DIGITAL ARCHIVE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
-    <div class="page">
-        <!-- HERO TITLE -->
-        <header class="hero">
-            <a href="#intro" class="nav-link">
-                <h1 class="parasit-logo">ПАРАЗИТ</h1>
-            </a>
-            <p class="hero-subtitle">Между Пухто и Эрмитажем</p>
-        </header>
+  <div class="site-shell">
+    <header class="masthead">
+      <a class="brand" href="#home" data-route="home" aria-label="PARAZIT home">PARAZIT</a>
+      <nav class="primary-nav" aria-label="Main navigation">
+        <a href="#archive" data-route="archive">ARCHIVE</a>
+        <a href="#gallery" data-route="gallery">GALLERY</a>
+        <a href="#index" data-route="index">INDEX</a>
+        <a href="#about" data-route="about">ABOUT</a>
+      </nav>
+      <button class="search-toggle" type="button" aria-label="Open search">SEARCH</button>
+    </header>
 
-        <!-- MAIN NAVIGATION -->
-        <nav class="main-nav">
-            <a href="#gallery" class="nav-link">GALLERY</a>
-            <a href="#group" class="nav-link">GROUP</a>
-        </nav>
-
-        <!-- CONTENT SECTIONS -->
-        <main class="content">
-            <section id="intro" class="content-section active">
-                <div class="content-inner">
-                    <h2>PARAZIT</h2>
-                    <p>С 2004 по сегодняшний день галерея PARAZIT организовывает выставки каждые две недели. Выставки на
-                        заданную тему непрерывно сменяют друг друга в коридоре галереи Борей. Санкт-Петербург, Россия.
-                    </p>
-                    <p>
-                        Так же частью концепции галереи является проект Веры Светловой «Паразит в галереях и музеях
-                        мира», где художники оставляют свои работы в шкафчиках институций и забирают ключ как артефакт
-                        причастности. Таким образом работы художников галереи хранятся в Центре Помпиду, Лувре, МоМА,
-                        Эрмитаже и других музеях мира.
-
-                    </p>
-                    <p>C 2022 года у галереи есть свое помещение в Петербурге - НИИ PARAZIT по адресу ул. Рентгена 4.
-                    </p>
-                    <h2>Выставки в галерее за последний год:</h2>
-                    <p>
-                        <strong>
-                            2025
-                        </strong>
-                        <br />
-                        &laquo;Случай: Зеленая ветка&raquo;, куратор &ndash; Елизавета Иванова, художники: основной
-                        состав объединения. 27 сентября &ndash; 26 ноября
-                        <br />
-                        &laquo;Потайная гълава Даниила Ивановича&raquo;, куратор &ndash; Дмитрий Жеравов, художники:
-                        основной состав объединения
-                        <br />
-                        &laquo;Давидкина ярмарка&raquo;, куратор &ndash; Давид Березин, художники: основной состав
-                        объединения &ndash; 23-26 августа
-                        <br />
-                        &laquo;Выставка реди-мейдов&raquo;, художники: основной состав объединения, куратор &ndash; Вова
-                        Лило, 9 &ndash; 13 июля
-                        <br />
-                        &laquo;Проклятый академизм&raquo;, кураторы &ndash; Наталья Феофилова-Фетинг и Елизавета
-                        Иванова, художники: основной состав объединения, 23 марта &ndash; 27 апреля
-                        <br />
-                        &laquo;FIX PRICE&raquo;, куратор &ndash; Елизавета Иванова, художники: основной состав
-                        объединения. 21-30 февраля
-                        <br />
-                        &laquo;Пороги&raquo;, куратор &ndash; Елизавета Иванова, художники: основной состав объединения,
-                        10 декабря 2024 &ndash; 10 февраля
-                        <br />
-                        <br />
-                        <strong>
-                            2024
-                        </strong>
-                        <br />
-                        &laquo;-Здравствуйте, это Вам!&raquo;, НИИ PARAZIT, г. Санкт-Петербург, Россия
-                        <br />
-                        &laquo;Колыбельная&raquo;, НИИ PARAZIT, г. Санкт-Петербург, Россия
-                        <br />
-                        <br />
-                        <strong>
-                            2023
-                        </strong>
-                        <br />
-                        &laquo;50% прозрачности&raquo;. НИИ PARAZIT, г. Санкт-Петербург, Россия
-                        <br />
-                        &laquo;Бывшие&raquo;, НИИ PARAZIT, Санкт-Петербург, Россия
-                        <br />
-                        &laquo;Незнакомый потолок&raquo;, НИИ PARAZIT, Санкт-Петербург, Россия
-                        <br />
-                        <br />
-                        <strong>
-                            2022
-                        </strong>
-                        <br />
-                        &laquo;Перфовечер&raquo;, НИИ PARAZIT, Санкт-Петербург, Россия
-                        <br />
-                        &laquo;Выставка люстр&raquo;, НИИ PARAZIT, Санкт-Петербург, Россия
-                        <br />
-                        <br />
-                    <h2>
-                        Выставочные проекты на внешних площадках:
-                    </h2>
-                    <br />
-                    <strong>
-                        2025
-                    </strong>
-                    <br />
-                    &laquo;Кабинет психотерапевта&raquo;, Eggz Gallery, г. Санкт-Петербург, Россия
-                    <br />
-                    &laquo;Между пухто и Эрмитажем&raquo;, Остров Новая Голландия, Павильон, г. Санкт-Петербург, Россия
-                    <br />
-                    &laquo;Пантеон&raquo;, Государственный Музей "Царскосельская коллекция", г. Пушкин, Россия
-                    <br />
-                    <br />
-                    <strong>
-                        2024
-                    </strong>
-                    <br />
-                    &laquo;Айболит 2024&raquo;, Галерея Борей, г. Санкт-Петербург, Россия
-                    <br />
-                    &laquo;Из ничего&raquo;, Кабаре Шум, г. Санкт-Петербург, Россия
-                    <br />
-                    &laquo;Павильон&raquo;, Станкозавод, г. Самара, Россия
-                    <br />
-                    &laquo;Чужестранцы повсюду&raquo;, Галерея Борей, г. Санкт-Петербург, Россия
-                    <br />
-                    <br />
-                    <strong>
-                        2023
-                    </strong>
-                    <br />
-                    &laquo;Да пошел ты&raquo;, Мастерская Полковника, г. Санкт-Петербург, Россия
-                    <br />
-                    &laquo;Цемента II&raquo;, Музей нонконформистского искусства, Большой зал, г. Санкт-Петербург,
-                    Россия
-                    <br />
-                    &laquo;Цемента II&raquo;, Винзавод, Акцизный зал, г. Москва, Россия
-                    <br />
-                    <br />
-                    <strong>
-                        2022
-                    </strong>
-                    <br />
-                    &laquo;Communication&raquo;, Studio44, г. Стокгольм, Швеция
-                    <br />
-                    &laquo;Коммуникация&raquo;, Борей Арт Центр, г. Санкт-Петербург, Россия
-                    <br />
-                    &laquo;В поисках подготовленного зрителя&raquo;, MARINA GISICH GALLERY, г. Санкт-Петербург, Россия
-                    <br />
-                    <br />
-                    <h2>
-                        Арт-ярмарки:
-                    </h2>
-                    <br />
-                    <strong>
-                        2025
-                    </strong>
-                    <br />
-                    &laquo;1703&raquo;, ярмарка современного искусства, "Лахта Центр", г. Санкт-Петербург, Россия
-                    <br />
-                    &laquo;Cosmoscow&raquo;, 13-я международная ярмарка современного искусства, "Тимирязев Центр", г.
-                    Москва, Россия
-                    <br />
-                    &laquo;TPAF&raquo;, ярмарка современного искусства, Третье место, г. Санкт-Петербург, Россия
-                    <br />
-                    &laquo;PORTARTFAIR&raquo;, ярмарка современного искусства, Севкабель Порт, г. Санкт-Петербург,
-                    Россия
-                    <br />
-                    &laquo;FIX PRICE&raquo;, НИИ PARAZIT, г. Санкт-Петербург, Россия
-                    <br />
-                    <br />
-                    <strong>
-                        2024
-                    </strong>
-                    <br />
-                    &laquo;PORTARTFAIR&raquo;, ярмарка современного искусства, Севкабель Порт, г. Санкт-Петербург,
-                    Россия
-                    <br />
-                    <br />
-                    <strong>
-                        2023
-                    </strong>
-                    <br />
-                    &laquo;Cosmoscow&raquo;, 11-я международная ярмарка современного искусства. Центрального выставочный
-                    комплекс &laquo;ЭКСПОЦЕНТР&raquo;, г. Москва, Россия
-                    <br />
-                    &laquo;PORTARTFAIR&raquo;, ярмарка современного искусства, Севкабель Порт, г. Санкт-Петербург,
-                    Россия
-                    <br />
-                    <br />
-                    <strong>
-                        2021
-                    </strong>
-                    <br />
-                    7-я независимая ярмарка современного искусства, Севкабель Порт, г. Санкт-Петербург, Россия
-                    <br />
-                    <br />
-                    <strong>
-                        2020
-                    </strong>
-                    <br />
-                    &laquo;Понаехали!&raquo; арт-ярмарка, Конгрессно-выставочный центр &laquo;ЭкспоФорум&raquo;, г.
-                    Санкт-Петербург, Россия
-                    </p>
-
-                </div>
-            </section>
-
-            <!-- GROUP SECTION -->
-            <section id="group" class="content-section">
-                <div class="content-inner">
-                    <h2>
-                        <nav class="main-nav">
-                            <a href="#artists" class="nav-link active">ARTISTS</a>
-                            <a href="#exhibitions" class="nav-link">EXHIBITIONS</a>
-                            <a href="#timeline" class="nav-link">TIMELINE</a>
-                        </nav>
-
-                    </h2>
-                </div>
-            </section>
-
-            <!-- GALLERY SECTION -->
-            <section id="gallery" class="content-section">
-                <div class="content-inner">
-                    <h2>GALLERY</h2>
-                    <div class="grid">
-                    </div>
-                </div>
-            </section>
-
-            <!-- EXHIBITIONS SECTION -->
-            <section id="exhibitions" class="content-section">
-                <div class="content-inner">
-                    <nav class="main-nav">
-                        <a href="#artists" class="nav-link">ARTISTS</a>
-                        <a href="#exhibitions" class="nav-link">EXHIBITIONS</a>
-                        <a href="#timeline" class="nav-link">TIMELINE</a>
-                    </nav>
-                    <div class="grid exhibition-grid-placeholder"></div> <!-- Empty - JS fills -->
-                </div>
-            </section>
-
-            <!-- ARTISTS SECTION -->
-            <section id="artists" class="content-section">
-                <div class="content-inner">
-                    <nav class="main-nav">
-                        <a href="#artists" class="nav-link">ARTISTS</a>
-                        <a href="#exhibitions" class="nav-link">EXHIBITIONS</a>
-                        <a href="#timeline" class="nav-link">TIMELINE</a>
-                    </nav>
-                    <div class="grid artist-grid-placeholder"></div> <!-- Empty - JS fills -->
-                </div>
-            </section>
-
-            <!-- TIMELINE SECTION -->
-            <section id="timeline" class="content-section">
-                <div class="content-inner">
-                    <nav class="main-nav">
-                        <a href="#artists" class="nav-link active">ARTISTS</a>
-                        <a href="#exhibitions" class="nav-link">EXHIBITIONS</a>
-                        <a href="#timeline" class="nav-link">TIMELINE</a>
-                    </nav>
-                    <div class="content-inner">
-                        <table>
-                            <tr>
-                                <th>2000</th>
-                                <td>PARAZIT gallery established</td>
-                            </tr>
-                            <tr>
-                                <th>2009</th>
-                                <td>Venice Biennale PARAZIT Pavilion</td>
-                            </tr>
-                        </table>
-                    </div>
-            </section>
-        </main>
+    <div class="system-strip" aria-label="Archive status">
+      <div class="ticker" id="systemTicker">PARAZIT DATABASE • ARCHIVE ACTIVE • ST.PETERSBURG • EST. 2000 •</div>
     </div>
 
-    <script src="script.js"></script>
+    <main id="app" tabindex="-1">
+      <section class="view view-home" data-view="home">
+        <div class="home-grid">
+          <div class="hero-block module red-module">
+            <div class="module-code">PZT-ARC-000 / SYSTEM</div>
+            <h1>PARAZIT</h1>
+            <p class="hero-kicker">DIGITAL ARCHIVE / GALLERY / INDEX</p>
+            <p class="hero-copy">Художественное объединение, галерея и непрерывный выставочный проект. Этот сайт собирает историю, людей, выставки, работы и документы PARAZIT в единую систему.</p>
+          </div>
+          <div class="feature-block module">
+            <div class="module-head"><span>FEATURED.RECORD</span><span id="featureId">—</span></div>
+            <div class="feature-image-wrap"><img id="featureImage" src="images/venice-1.jpg" alt="PARAZIT archive image"></div>
+            <div class="feature-meta"><strong id="featureTitle">VENICE BIENNALE</strong><span id="featureYear">2009</span></div>
+          </div>
+          <div class="module info-module">
+            <div class="module-head"><span>SYS.INFO</span><span>ON</span></div>
+            <p>PARAZIT работает как художественное объединение и выставочная система. Архив фиксирует известные события и постепенно дополняется первичными документами.</p>
+            <div class="stats" id="stats"></div>
+          </div>
+          <div class="module roster-module">
+            <div class="module-head"><span>ROSTER.ACTV</span><span id="rosterCount">00</span></div>
+            <ol id="roster" class="roster"></ol>
+          </div>
+        </div>
+
+        <section class="home-section">
+          <div class="section-title"><span>LATEST.EXHIBITIONS</span><a href="#archive" data-route="archive">OPEN ARCHIVE →</a></div>
+          <div class="record-grid" id="latestExhibitions"></div>
+        </section>
+
+        <section class="home-section">
+          <div class="section-title"><span>ARCHIVE.TIMELINE</span><a href="#archive" data-route="archive">FULL TIMELINE →</a></div>
+          <div class="timeline-mini" id="timelineMini"></div>
+        </section>
+      </section>
+
+      <section class="view" data-view="archive">
+        <div class="page-header">
+          <div><span class="eyebrow">PZT-ARC-000</span><h2>ARCHIVE</h2></div>
+          <p>Хронология и каталог событий PARAZIT. Записи разделены на подтверждённые данные и материалы, требующие дальнейшей проверки.</p>
+        </div>
+        <div class="archive-toolbar">
+          <label>YEAR <select id="yearFilter"><option value="all">ALL</option></select></label>
+          <label>TYPE <select id="typeFilter"><option value="all">ALL</option><option value="exhibition">EXHIBITION</option><option value="project">PROJECT</option><option value="gallery">GALLERY</option><option value="venue">VENUE</option><option value="origin">ORIGIN</option></select></label>
+          <label class="search-field">QUERY <input id="archiveQuery" type="search" placeholder="search archive..."></label>
+        </div>
+        <div id="archiveResults" class="archive-list"></div>
+      </section>
+
+      <section class="view" data-view="gallery">
+        <div class="page-header">
+          <div><span class="eyebrow">IMAGE INDEX</span><h2>GALLERY</h2></div>
+          <p>Изображения, связанные с архивными записями PARAZIT. Выберите запись для просмотра контекста.</p>
+        </div>
+        <div id="galleryGrid" class="gallery-grid"></div>
+      </section>
+
+      <section class="view" data-view="index">
+        <div class="page-header">
+          <div><span class="eyebrow">PZT-INDEX</span><h2>INDEX</h2></div>
+          <p>Люди и участники, связанные с архивом PARAZIT.</p>
+        </div>
+        <div class="index-tabs"><button class="index-tab active" data-index-tab="artists">ARTISTS</button><button class="index-tab" data-index-tab="exhibitions">EXHIBITIONS</button></div>
+        <div id="indexContent"></div>
+      </section>
+
+      <section class="view" data-view="about">
+        <div class="page-header">
+          <div><span class="eyebrow">PZT-SYS</span><h2>ABOUT</h2></div>
+          <p>PARAZIT как художественная система.</p>
+        </div>
+        <div class="about-grid">
+          <article class="module text-module"><span class="eyebrow">01 / PARAZIT</span><h3>ИСКУССТВО В МАССЫ</h3><p>PARAZIT возник как проект, связанный с несколькими художественными институциями и программой «Искусство в массы». История объединения включает галерейную деятельность, внешние проекты, ярмарки и самостоятельное пространство.</p></article>
+          <article class="module text-module"><span class="eyebrow">02 / NII PARAZIT</span><h3>РЕНТГЕНА, 4</h3><p>С 2022 года у PARAZIT есть собственное пространство в Санкт-Петербурге — НИИ PARAZIT. Оно продолжает логику выставочной лаборатории и постоянной смены проектов.</p></article>
+          <article class="module text-module"><span class="eyebrow">03 / ARCHIVE</span><h3>WORK IN PROGRESS</h3><p>Этот цифровой архив не пытается заполнить пробелы выдуманными фактами. Недостающие даты, атрибуции и документы должны отмечаться как неизвестные и постепенно уточняться.</p></article>
+          <article class="module text-module"><span class="eyebrow">04 / OLD SITE</span><h3>HISTORICAL WEBSITE</h3><p>Предыдущая версия сайта PARAZIT рассматривается как самостоятельный исторический документ и будет подключена к архиву отдельным разделом.</p><a class="external-link" href="https://web.archive.org/web/20161013035344/http://parazzzit.spb.ru/history.php" target="_blank" rel="noopener">WAYBACK / 2016 →</a></article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <span>PARAZIT / DIGITAL ARCHIVE</span><span id="footerStatus">ARCHIVE STATUS: ACTIVE</span><span>ST.PETERSBURG / RU</span>
+    </footer>
+  </div>
+
+  <dialog id="searchDialog" class="search-dialog">
+    <form method="dialog" class="search-panel">
+      <button class="dialog-close" value="close" aria-label="Close">×</button>
+      <label for="globalSearch">SEARCH PARAZIT</label>
+      <input id="globalSearch" type="search" placeholder="artist / exhibition / year / place..." autofocus>
+      <div id="searchResults" class="search-results"></div>
+    </form>
+  </dialog>
+
+  <dialog id="recordDialog" class="record-dialog">
+    <button class="dialog-close" type="button" id="recordClose" aria-label="Close">×</button>
+    <div id="recordDetail"></div>
+  </dialog>
+
+  <script src="script.js"></script>
 </body>
-
-<footer class="site-footer">
-    <div class="footer-content">
-        <div class="footer-grid">
-            <!-- Empty columns for future use -->
-            <div class="footer-column">
-                <h4 class="footer-title"></h4>
-                <ul class="footer-list"></ul>
-            </div>
-            <div class="footer-column">
-                <h4 class="footer-title"></h4>
-                <ul class="footer-list"></ul>
-            </div>
-            <div class="footer-column">
-                <h4 class="footer-title"></h4>
-                <ul class="footer-list"></ul>
-            </div>
-        </div>
-
-        <div class="footer-bottom">
-            <div class="social-links">
-                <a href="#" class="social-link" aria-label="Facebook">
-                    <img src="icons/facebook.svg" width="20" height="20" alt="Facebook">
-                </a>
-                <a href="#" class="social-link" aria-label="Instagram">
-                    <img src="icons/instagram.svg" width="20" height="20" alt="Instagram">
-                </a>
-                <a href="#" class="social-link" aria-label="YouTube">
-                    <img src="icons/youtube.svg" width="20" height="20" alt="YouTube">
-                </a>
-            </div>
-
-            <p class="footer-copyright">© 2026 eli_lab. All rights reserved.</p>
-        </div>
-    </div>
-</footer>
-
-
 </html>
