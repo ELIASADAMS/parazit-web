@@ -1,3 +1,28 @@
 {
-  "venues": []
+  "venues": [
+    {"id":"venue-borey","archiveId":"PZT-VEN-001","name":"Арт-центр «Борей»","nameLatin":"Borey Art Centre","city":"Санкт-Петербург","country":"Россия","address":"Литейный проспект, 58","type":"gallery / host institution","sourceIds":["src-gisich-2014","src-supermarket-2015","src-parazit-group"],"confidence":"documented"},
+    {"id":"venue-nii-parazit","archiveId":"PZT-VEN-002","name":"НИИ PARAZIT","nameLatin":"NII PARAZIT","city":"Санкт-Петербург","country":"Россия","address":"ул. Рентгена, 4","type":"PARAZIT space","activeFrom":2022,"sourceIds":["src-teodorus","src-parazit-group"],"confidence":"documented"},
+    {"id":"venue-gisich-gallery","archiveId":"PZT-VEN-003","name":"Marina Gisich Gallery","nameLatin":"Marina Gisich Gallery","city":"Санкт-Петербург","country":"Россия","address":"наб. реки Фонтанки, 121","type":"gallery","sourceIds":["src-gisich-2014"],"confidence":"documented"},
+    {"id":"venue-gisich-projects","archiveId":"PZT-VEN-004","name":"Marina Gisich Projects","nameLatin":"Marina Gisich Projects","city":"Санкт-Петербург","country":"Россия","address":"наб. реки Фонтанки, 121","type":"project space","sourceIds":["src-gisich-2022"],"confidence":"documented"},
+    {"id":"venue-eggz","archiveId":"PZT-VEN-005","name":"Eggz Gallery","city":"Санкт-Петербург","country":"Россия","address":"Галерная улица, 19","type":"gallery","sourceIds":["src-sobaka-eggz-2025"],"confidence":"documented"},
+    {"id":"venue-new-holland","archiveId":"PZT-VEN-006","name":"Новая Голландия / Павильон","city":"Санкт-Петербург","country":"Россия","type":"cultural venue","sourceIds":["src-new-holland-2025"],"confidence":"documented"},
+    {"id":"venue-tsarskoye-selo","archiveId":"PZT-VEN-007","name":"Государственный музей «Царскосельская коллекция»","city":"Пушкин","country":"Россия","address":"Магазейная улица, 40","type":"museum","sourceIds":["src-panteon-2025","src-pantheon-sobaka-2025"],"confidence":"documented"},
+    {"id":"venue-cabaret-shum","archiveId":"PZT-VEN-008","name":"Кабаре Шум","city":"Санкт-Петербург","country":"Россия","type":"cultural venue","sourceIds":["src-parazit-group"],"confidence":"official listing"},
+    {"id":"venue-stankozavod","archiveId":"PZT-VEN-009","name":"Станкозавод","city":"Самара","country":"Россия","type":"cultural venue","sourceIds":["src-parazit-group","src-kalashnikov-2025"],"confidence":"documented"},
+    {"id":"venue-nonconformist","archiveId":"PZT-VEN-010","name":"Музей нонконформистского искусства","city":"Санкт-Петербург","country":"Россия","type":"museum / gallery","sourceIds":["src-parazit-group","src-p10-cementa-2023"],"confidence":"documented"},
+    {"id":"venue-vinzavod","archiveId":"PZT-VEN-011","name":"Винзавод / Акцизный зал","city":"Москва","country":"Россия","type":"art centre","sourceIds":["src-winzavod-2023"],"confidence":"documented"},
+    {"id":"venue-venice-biennale","archiveId":"PZT-VEN-012","name":"Venice Biennale","city":"Венеция","country":"Италия","type":"biennale","sourceIds":["src-tereshko-cv","src-hisorighe-cv"],"confidence":"documented"},
+    {"id":"venue-master-polkovnika","archiveId":"PZT-VEN-013","name":"Мастерская Полковника / Пушкинская-10","city":"Санкт-Петербург","country":"Россия","type":"artist-run venue","sourceIds":["src-parazit-group","src-p10-parazit"],"confidence":"documented"},
+    {"id":"venue-studio44","archiveId":"PZT-VEN-014","name":"Studio44","city":"Стокгольм","country":"Швеция","type":"studio / gallery","sourceIds":["src-parazit-group"],"confidence":"official listing"},
+    {"id":"venue-lahta-center","archiveId":"PZT-VEN-015","name":"Лахта Центр","city":"Санкт-Петербург","country":"Россия","type":"fair venue","sourceIds":["src-parazit-group"],"confidence":"official listing"},
+    {"id":"venue-timiryazev","archiveId":"PZT-VEN-016","name":"Тимирязев Центр","city":"Москва","country":"Россия","type":"fair venue","sourceIds":["src-parazit-group","src-cosmoscow-2026-telegram"],"confidence":"documented"},
+    {"id":"venue-third-place","archiveId":"PZT-VEN-017","name":"Третье место","city":"Санкт-Петербург","country":"Россия","type":"cultural venue / fair","sourceIds":["src-parazit-group"],"confidence":"official listing"},
+    {"id":"venue-sevkabel","archiveId":"PZT-VEN-018","name":"Севкабель Порт","city":"Санкт-Петербург","country":"Россия","type":"fair venue","sourceIds":["src-parazit-group"],"confidence":"official listing"},
+    {"id":"venue-expoforum","archiveId":"PZT-VEN-019","name":"Экспофорум","city":"Санкт-Петербург","country":"Россия","type":"fair venue","sourceIds":["src-parazit-group"],"confidence":"official listing"},
+    {"id":"venue-factory-lemon","archiveId":"PZT-VEN-020","name":"Фабрика Лимонной Кислоты","city":"Санкт-Петербург","country":"Россия","address":"Лиговский пр., 52Б, ворота 40","type":"fair / cultural venue","sourceIds":["src-parazit-telegram"],"confidence":"documented"},
+    {"id":"venue-veliky-novgorod-csa","archiveId":"PZT-VEN-021","name":"Центр современного искусства Великого Новгорода","city":"Великий Новгород","country":"Россия","type":"contemporary art centre","sourceIds":["src-parazit-telegram","src-p10-parazit"],"confidence":"documented"},
+    {"id":"venue-fontanka-barracks","archiveId":"PZT-VEN-022","name":"Казармы на Фонтанке 90, к.5","city":"Санкт-Петербург","country":"Россия","type":"temporary fair venue","sourceIds":["src-parazit-telegram"],"confidence":"documented"},
+    {"id":"venue-pushkin10","archiveId":"PZT-VEN-023","name":"Пушкинская-10","city":"Санкт-Петербург","country":"Россия","type":"artist centre","sourceIds":["src-p10-parazit","src-parazit-telegram"],"confidence":"documented"},
+    {"id":"venue-dyagilev","archiveId":"PZT-VEN-024","name":"Музей современных искусств им. С. П. Дягилева СПбГУ","city":"Санкт-Петербург","country":"Россия","type":"museum","sourceIds":["src-parazit-telegram"],"confidence":"documented"}
+  ]
 }
