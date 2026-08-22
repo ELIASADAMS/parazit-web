@@ -1,6 +1,33 @@
 {
   "exhibitions": [
     {
+      "id":"exh-green-branch-2025","archiveId":"PZT-EXH-010","title":"Случай: Зеленая ветка","type":"exhibition","start":"2025-09-27","end":"2025-11-26","year":2025,"venueId":"venue-borey","city":"Санкт-Петербург","curatorIds":["elizabeth-ivanova"],"artistIds":[],"images":[],"documentIds":[],"sourceIds":["src-parazit-group"],"confidence":"documented","description":"Выставка PARAZIT; официальный сайт указывает Елизавету Иванову куратором и основной состав объединения среди художников."
+    },
+    {
+      "id":"exh-secret-daniil-2025","archiveId":"PZT-EXH-011","title":"Потайная гълава Даниила Ивановича","type":"exhibition","year":2025,"venueId":"venue-borey","city":"Санкт-Петербург","curatorIds":["dmitry-zheravov"],"artistIds":[],"images":[],"documentIds":[],"sourceIds":["src-parazit-group"],"confidence":"documented","description":"Выставка PARAZIT; официальный сайт указывает Дмитрия Жеравова куратором и основной состав объединения среди художников."
+    },
+    {
+      "id":"exh-davidkina-fair-2025","archiveId":"PZT-EXH-012","title":"Давидкина ярмарка","type":"fair","start":"2025-08-23","end":"2025-08-26","year":2025,"venueId":"venue-borey","city":"Санкт-Петербург","curatorIds":["david-berezin"],"artistIds":[],"images":[],"documentIds":[],"sourceIds":["src-parazit-group"],"confidence":"documented","description":"Ярмарочный проект PARAZIT под кураторством Давида Березина."
+    },
+    {
+      "id":"exh-readymades-2025","archiveId":"PZT-EXH-013","title":"Выставка реди-мейдов","type":"exhibition","start":"2025-07-09","end":"2025-07-13","year":2025,"venueId":"venue-borey","city":"Санкт-Петербург","curatorIds":["vova-lilo"],"artistIds":[],"images":[],"documentIds":[],"sourceIds":["src-parazit-group"],"confidence":"documented","description":"Выставка PARAZIT; куратор — Вова Лило."
+    },
+    {
+      "id":"exh-cursed-academicism-2025","archiveId":"PZT-EXH-014","title":"Проклятый академизм","type":"exhibition","start":"2025-03-23","end":"2025-04-27","year":2025,"venueId":"venue-borey","city":"Санкт-Петербург","curatorIds":["natalia-feofilova-feting","elizabeth-ivanova"],"artistIds":[],"images":[],"documentIds":[],"sourceIds":["src-parazit-group"],"confidence":"documented","description":"Выставка PARAZIT под кураторством Натальи Феофиловой-Фетинг и Елизаветы Ивановой."
+    },
+    {
+      "id":"exh-fix-price-2025","archiveId":"PZT-EXH-015","title":"FIX PRICE","type":"exhibition","year":2025,"venueId":"venue-borey","city":"Санкт-Петербург","curatorIds":["elizabeth-ivanova"],"artistIds":[],"images":[],"documentIds":[],"sourceIds":["src-parazit-group"],"confidence":"documented","description":"Выставка PARAZIT под кураторством Елизаветы Ивановой. Официальный сайт указывает период 21–30 февраля 2025. Дата сохранена без нормализации."
+    },
+    {
+      "id":"exh-thresholds-2024-2025","archiveId":"PZT-EXH-016","title":"Пороги","type":"exhibition","start":"2024-12-10","end":"2025-02-10","year":2024,"venueId":"venue-borey","city":"Санкт-Петербург","curatorIds":["elizabeth-ivanova"],"artistIds":[],"images":[],"documentIds":[],"sourceIds":["src-parazit-group"],"confidence":"documented","description":"Выставка PARAZIT под кураторством Елизаветы Ивановой."
+    },
+    {
+      "id":"exh-kucha-2-2026","archiveId":"PZT-EXH-017","title":"Куча-2. Фабрика языков","type":"fair","start":"2026-04-24","end":"2026-04-26","year":2026,"venueId":"venue-ligovsky-factory","city":"Санкт-Петербург","curatorIds":[],"artistIds":["alisa-detochkina"],"images":[],"documentIds":[],"sourceIds":["src-parazit-telegram"],"confidence":"documented","description":"PARAZIT участвовал в ярмарке независимого искусства и книгоиздания «Куча-2» на Фабрике Лимонной Кислоты со стендом «Искусство за ваши монеты». Telegram-архив PARAZIT также упоминает серию работ Алисы Деточкиной «Игра в карты»."
+    },
+    {
+      "id":"exh-in-minor-keys-2026","archiveId":"PZT-EXH-018","title":"In Minor Keys / ПАРАЗИТ в миноре","type":"external project","start":"2026-02-27","end":"2026-02-27","year":2026,"venueId":"venue-veliky-novgorod-csa","city":"Великий Новгород","curatorIds":["timur-musaev-kagan"],"artistIds":[],"images":[],"documentIds":[],"sourceIds":["src-parazit-telegram"],"confidence":"documented","description":"Telegram-архив PARAZIT сообщает о проекте «ПАРАЗИТ в миноре», связанном с 61-й Венецианской биеннале, в Центре современного искусства Великого Новгорода 27 февраля 2026."
+    },
+    {
       "id":"exh-trained-spectator-2022","archiveId":"PZT-EXH-001","title":"PARAZIT Group. SEARCHING FOR THE TRAINED SPECTATOR","titleRussian":"Паразит. В поисках подготовленного зрителя","type":"exhibition","start":"2022-03-02","end":"2022-05-07","year":2022,"venueId":"venue-gisich-projects","city":"Санкт-Петербург","curatorIds":["motolyanets","timur-musaev-kagan"],"artistIds":["kozin","motolyanets","shishkin-hokusai","panin","lilo","kabo","tereshko","sasha-nefedova"],"images":[],"documentIds":["doc-gisich-trained-spectator-2022"],"sourceIds":["src-gisich-2022"],"confidence":"documented","description":"Проект PARAZIT о зрителе и посредничестве между художником и аудиторией."
     },
     {
