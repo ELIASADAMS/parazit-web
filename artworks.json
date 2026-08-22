@@ -1,0 +1,34 @@
+{
+  "artworks": [
+    {
+      "id": "sweet-column-dial-of-the-night",
+      "archiveId": "PZT-WRK-001",
+      "title": "Сладкая колонна (Ночной циферблат)",
+      "titleLatin": "Sweet Column (Dial of the Night)",
+      "year": 2024,
+      "artistIds": ["motolyanets"],
+      "medium": "эмаль, дерево, металл",
+      "dimensions": "188 × 79 × 64 см",
+      "images": [],
+      "exhibitionIds": [],
+      "sourceIds": ["src-cosmoscow-2025"],
+      "confidence": "documented",
+      "notes": "Работа указана в каталоге Cosmoscow 2025 как произведение Семёна Мотолянеца, представленное PARAZIT."
+    },
+    {
+      "id": "venetian-correctional-camp",
+      "archiveId": "PZT-WRK-002",
+      "title": "Venetian correctional camp",
+      "titleRussian": "Венецианский исправительный лагерь",
+      "year": 2014,
+      "artistIds": ["morozov"],
+      "medium": "model",
+      "dimensions": null,
+      "images": [],
+      "exhibitionIds": ["exh-venice-salvation-2014"],
+      "sourceIds": ["src-supermarket-2015"],
+      "confidence": "documented",
+      "notes": "Работа Александра Морозова зафиксирована в каталоге Supermarket как часть PARAZIT / Salvation of Venice."
+    }
+  ]
+}
