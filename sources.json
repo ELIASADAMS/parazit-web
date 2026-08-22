@@ -1,3 +1,36 @@
 {
-  "sources": []
+  "sources": [
+    {"id":"src-parazit-group","title":"PARAZIT / official website","url":"https://parazit.group/","type":"official website","accessed":"2026-08-22"},
+    {"id":"src-parazit-telegram","title":"Паразит/Parazit / official Telegram channel","url":"https://t.me/PARAZIT_Group","type":"official social archive","accessed":"2026-08-22"},
+    {"id":"src-wayback-2016","title":"Wayback Machine / PARAZIT history.php","url":"https://web.archive.org/web/20161013035344/http://parazzzit.spb.ru/history.php","type":"web archive","accessed":"2026-08-22"},
+    {"id":"src-gisich-2014","title":"Marina Gisich Gallery / VENICE SALVATION 2014","url":"https://www.shop.gisich.com/en/exhibitions/341/","type":"institutional exhibition record","accessed":"2026-08-22"},
+    {"id":"src-gisich-2022","title":"Marina Gisich / PARAZIT Group. SEARCHING FOR THE TRAINED SPECTATOR","url":"https://www.gisich.com/en/viewing-rooms/parazit22/","type":"institutional exhibition record","accessed":"2026-08-22"},
+    {"id":"src-borey-2014","title":"Borey / PARAZIT exhibition index","url":"https://borey.ru/","type":"institutional archive","accessed":"2026-08-22"},
+    {"id":"src-borey-2015","title":"Borey / 10 НОВЫХ ПЛОХИХ РАБОТ","url":"https://borey.ru/gallery/drb-25-let-art-tsentru-borej/","type":"institutional exhibition record","accessed":"2026-08-22"},
+    {"id":"src-borey-aibolit-2024","title":"Borey / АЙБОЛИТ 2024","url":"https://borey.ru/gallery/ajbolit-2024-tvorcheskoe-obedinenie-parazit/","type":"institutional exhibition record","accessed":"2026-08-22"},
+    {"id":"src-supermarket-2015","title":"Supermarket Art Fair 2015 catalogue","url":"https://supermarketartfair.com/wp-content/uploads/2025/01/kat_2015_144dpi.pdf","type":"catalogue","accessed":"2026-08-22"},
+    {"id":"src-artmargins-2016","title":"ARTMargins / When Canons Roar","url":"https://artmargins.com/when-canons-roar-artists-reflect-on-the-conflict-in-ukraine/","type":"interview / article","accessed":"2026-08-22"},
+    {"id":"src-cosmoscow-2025","title":"Cosmoscow 2025 catalogue","url":"https://st.cosmoscow.com/media/press/%D0%9A%D0%B0%D1%82%D0%B0%D0%BB%D0%BE%D0%B3_Cosmoscow_2025.pdf","type":"fair catalogue","accessed":"2026-08-22"},
+    {"id":"src-teodorus","title":"TEO by Cosmoscow / PARAZIT","url":"https://en.teodorus.art/galleries/parazit/index.php","type":"gallery profile","accessed":"2026-08-22"},
+    {"id":"src-spbu-2020","title":"SPbU / art history bibliography","url":"https://pureportal.spbu.ru/files/89335863/Ershov.pdf","type":"academic source","accessed":"2026-08-22"},
+    {"id":"src-tereshko-cv","title":"Alena Tereshko CV","url":"https://alenatereshko.com/cv_rus","type":"artist CV","accessed":"2026-08-22"},
+    {"id":"src-hisorighe-cv","title":"Fedor Hirosige biography","url":"https://www.annanova-gallery.ru/artists/336-/biography/","type":"artist biography","accessed":"2026-08-22"},
+    {"id":"src-encspb","title":"Encyclopedia of Saint Petersburg / PARAZIT","url":"https://encspb.ru/object/2804729598/D_1803401815/7?dv=2853961040&lc=ru","type":"encyclopedic source","accessed":"2026-08-22"},
+    {"id":"src-sobaka-eggz-2025","title":"Sobaka.ru / PARAZIT × Eggz Gallery: Кабинет психотерапевта","url":"https://www.sobaka.ru/entertainment/art/199511","type":"press / exhibition record","accessed":"2026-08-22"},
+    {"id":"src-new-holland-2025","title":"SPBCult / Parazit in New Holland","url":"https://spbcult.ru/news/anonsy/v-novoy-gollandii-zavedetsya-parazit/","type":"press / exhibition announcement","accessed":"2026-08-22"},
+    {"id":"src-panteon-2025","title":"Государственный музей «Царскосельская коллекция» / ПАНТЕОН","url":"https://museumfa.ru/exhibitions-2025-may-parazit-group","type":"museum exhibition record","accessed":"2026-08-22"},
+    {"id":"src-p10-parazit","title":"Пушкинская-10 / PARAZIT references","url":"https://p-10.ru/2025/05/","type":"institutional archive","accessed":"2026-08-22"},
+    {"id":"src-sobaka-foreigners-2024","title":"Sobaka.ru / Чужестранцы повсюду","url":"https://www.sobaka.ru/entertainment/art/176775","type":"press / exhibition announcement","accessed":"2026-08-22"},
+    {"id":"src-artocratia-foreigners-2024","title":"Artocratia / Чужестранцы повсюду","url":"https://artocratia.ru/journal/blitz-interview-with-the-parazit-group","type":"interview / exhibition record","accessed":"2026-08-22"},
+    {"id":"src-winzavod-2023","title":"Winzavod / ЦЕМЕНТА II","url":"https://15.winzavod.ru/projects-of-curators-and-individual-communities","type":"institutional exhibition record","accessed":"2026-08-22"},
+    {"id":"src-p10-cementa-2023","title":"Пушкинская-10 / ЦЕМЕНТА II","url":"https://p-10.ru/season/past/","type":"institutional archive","accessed":"2026-08-22"},
+    {"id":"src-mortis-cv","title":"Yulia Mortis exhibition CV","url":"https://texturagallery.com/uliamortis","type":"artist CV","accessed":"2026-08-22"},
+    {"id":"src-kalashnikov-2025","title":"Nariman Kalashnikov / exhibition CV","url":"https://namegallery.ru/kalashnikov","type":"artist CV","accessed":"2026-08-22"},
+    {"id":"src-cosmoscow-2026-telegram","title":"Cosmoscow / 2026 gallery-section announcement","url":"https://t.me/s/cosmoscowfair","type":"official fair social archive","accessed":"2026-08-22"},
+    {"id":"src-2021-book","title":"PARAZIT: между ПУХТО и Эрмитажем / 2000–2015","url":"https://shop.gisich.com/ru/books/1069/","type":"book / publication","accessed":"2026-08-22"},
+    {"id":"src-2025-catalog-fair","title":"Catalog Fair / PARAZIT Gallery profile","url":"https://catalogfair.ru/galleries/galereya-parazit/","type":"fair profile","accessed":"2026-08-22"},
+    {"id":"src-pantheon-sobaka-2025","title":"Sobaka.ru / PARAZIT GROUP ПАНТЕОН","url":"https://www.sobaka.ru/entertainment/art/198703","type":"press / exhibition record","accessed":"2026-08-22"},
+    {"id":"src-p10-nikiforov","title":"Пушкинская-10 / Юрий Никифоров","url":"https://p-10.ru/persons/nikiforov-jurij/","type":"artist biography / publication record","accessed":"2026-08-22"},
+    {"id":"src-k35-ivanenkova-2024","title":"K35 Gallery / Anastasia Ivanenkova","url":"https://k35gallery.art/ivanenkova_anastasia","type":"artist CV","accessed":"2026-08-22"}
+  ]
 }
