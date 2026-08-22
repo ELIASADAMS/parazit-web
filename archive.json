@@ -2,11 +2,13 @@
   "metadata": {
     "name": "PARAZIT DIGITAL ARCHIVE",
     "archiveId": "PZT-ARC-000",
-    "schemaVersion": "1.0",
+    "schemaVersion": "1.1",
     "established": 2000,
     "activitySince": 2004,
     "location": "Санкт-Петербург, Россия",
-    "status": "ACTIVE"
+    "status": "ACTIVE",
+    "officialWebsite": "https://parazit.group/",
+    "telegram": "https://t.me/PARAZIT_Group"
   },
   "timeline": [
     {
@@ -14,77 +16,47 @@
       "year": 2000,
       "type": "origin",
       "title": "PARAZIT",
-      "description": "Источники связывают появление идеи PARAZIT с участниками «Товарищества Новые Тупые».",
-      "recordRefs": [],
-      "sourceIds": ["src-encspb", "src-gisich-2022"],
-      "confidence": "documented"
+      "description": "Источники связывают появление идеи PARAZIT с участниками «Товарищества Новые Тупые»."
+      ,"recordRefs": [],"sourceIds": ["src-encspb", "src-gisich-2022"],"confidence": "documented"
     },
     {
-      "id": "timeline-2004",
-      "year": 2004,
-      "type": "gallery",
-      "title": "Борей",
-      "description": "Источники описывают непрерывную выставочную деятельность PARAZIT в коридоре арт-центра «Борей» с 2004 года.",
-      "recordRefs": ["venue-borey"],
-      "sourceIds": ["src-supermarket-2015", "src-gisich-2014"],
-      "confidence": "documented"
+      "id": "timeline-2004","year": 2004,"type": "gallery","title": "Борей","description": "Источники описывают непрерывную выставочную деятельность PARAZIT в коридоре арт-центра «Борей» с 2004 года.","recordRefs": ["venue-borey"],"sourceIds": ["src-supermarket-2015", "src-gisich-2014", "src-parazit-group"],"confidence": "documented"
     },
     {
-      "id": "timeline-2013",
-      "year": 2013,
-      "type": "project",
-      "title": "PARAZIT+ / Lost in Translation",
-      "description": "В источниках зафиксированы проекты PARAZIT+ в Москве и Перми, а также Lost in Translation в рамках специального проекта Венецианской биеннале.",
-      "recordRefs": ["exh-parazit-plus-2013", "exh-lost-in-translation-2013"],
-      "sourceIds": ["src-tereshko-cv", "src-hisorighe-cv"],
-      "confidence": "documented"
+      "id": "timeline-2013","year": 2013,"type": "project","title": "PARAZIT+ / Lost in Translation","description": "В источниках зафиксированы проекты PARAZIT+ в Москве и Перми, а также Lost in Translation в рамках специального проекта Венецианской биеннале.","recordRefs": ["exh-parazit-plus-2013", "exh-lost-in-translation-2013"],"sourceIds": ["src-tereshko-cv", "src-hisorighe-cv"],"confidence": "documented"
     },
     {
-      "id": "timeline-2014",
-      "year": 2014,
-      "type": "activity",
-      "title": "PARAZIT / 2014",
-      "description": "Крупный цикл проектов, включая «Чёрную зависть», «Цемента I» и «Спасение Венеции».",
-      "recordRefs": ["exh-black-envy-2014", "exh-cementa-2014", "exh-venice-salvation-2014"],
-      "sourceIds": ["src-borey-2014", "src-gisich-2014"],
-      "confidence": "documented"
+      "id": "timeline-2014","year": 2014,"type": "activity","title": "PARAZIT / 2014","description": "Крупный цикл проектов, включая «Чёрную зависть», «Цемента I» и «Спасение Венеции».","recordRefs": ["exh-black-envy-2014", "exh-cementa-2014", "exh-venice-salvation-2014"],"sourceIds": ["src-borey-2014", "src-gisich-2014"],"confidence": "documented"
     },
     {
-      "id": "timeline-2015",
-      "year": 2015,
-      "type": "fair",
-      "title": "Supermarket / Stockholm",
-      "description": "PARAZIT участвовал в Stockholm Independent Art Fair / Supermarket 2015.",
-      "recordRefs": ["event-supermarket-2015"],
-      "sourceIds": ["src-supermarket-2015", "src-artmargins-2016"],
-      "confidence": "documented"
+      "id": "timeline-2015","year": 2015,"type": "fair","title": "Supermarket / Stockholm","description": "PARAZIT участвовал в Stockholm Independent Art Fair / Supermarket 2015.","recordRefs": ["event-supermarket-2015"],"sourceIds": ["src-supermarket-2015", "src-artmargins-2016"],"confidence": "documented"
     },
     {
-      "id": "timeline-2022",
-      "year": 2022,
-      "type": "venue",
-      "title": "НИИ PARAZIT",
-      "description": "Источники указывают собственное пространство PARAZIT на улице Рентгена, 4 в Санкт-Петербурге.",
-      "recordRefs": ["venue-nii-parazit"],
-      "sourceIds": ["src-teodorus", "src-cosmoscow-2025"],
-      "confidence": "documented"
+      "id": "timeline-2022","year": 2022,"type": "venue","title": "НИИ PARAZIT","description": "Источники указывают собственное пространство PARAZIT на улице Рентгена, 4 в Санкт-Петербурге.","recordRefs": ["venue-nii-parazit"],"sourceIds": ["src-teodorus", "src-cosmoscow-2025", "src-parazit-group"],"confidence": "documented"
+    },
+    {
+      "id": "timeline-2025","year": 2025,"type": "activity","title": "PARAZIT / 2025","description": "Официальный сайт фиксирует серию выставок и ярмарочных проектов: «Пороги», «FIX PRICE», «Проклятый академизм», «Выставка реди-мейдов», «Давидкина ярмарка», «Потайная гълава Даниила Ивановича» и «Случай: Зеленая ветка».","recordRefs": ["exh-thresholds-2024-2025","exh-fix-price-2025","exh-cursed-academicism-2025","exh-readymades-2025","exh-davidkina-fair-2025","exh-secret-daniil-2025","exh-green-branch-2025"],"sourceIds": ["src-parazit-group"],"confidence": "documented"
+    },
+    {
+      "id": "timeline-2026","year": 2026,"type": "activity","title": "PARAZIT / 2026","description": "Telegram-архив фиксирует участие PARAZIT в ярмарке «Куча-2» и проект «ПАРАЗИТ в миноре» в Великом Новгороде.","recordRefs": ["exh-kucha-2-2026","exh-in-minor-keys-2026"],"sourceIds": ["src-parazit-telegram"],"confidence": "documented"
     }
   ],
   "externalProjects": [
-    {"year": 2025, "title": "Кабинет психотерапевта", "venueId": "venue-eggz", "city": "Санкт-Петербург"},
-    {"year": 2025, "title": "Между пухто и Эрмитажем", "venueId": "venue-new-holland", "city": "Санкт-Петербург"},
-    {"year": 2025, "title": "Пантеон", "venueId": "venue-tsarskoye-selo", "city": "Пушкин"},
-    {"year": 2024, "title": "Айболит 2024", "venueId": "venue-borey", "city": "Санкт-Петербург"},
-    {"year": 2024, "title": "Из ничего", "venueId": "venue-cabaret-shum", "city": "Санкт-Петербург"},
-    {"year": 2024, "title": "Павильон", "venueId": "venue-stankozavod", "city": "Самара"},
-    {"year": 2023, "title": "Цемента II", "venueId": "venue-nonconformist", "city": "Санкт-Петербург"},
-    {"year": 2023, "title": "Цемента II", "venueId": "venue-vinzavod", "city": "Москва"}
+    {"year": 2025,"title":"Кабинет психотерапевта","venueId":"venue-eggz","city":"Санкт-Петербург"},
+    {"year": 2025,"title":"Между пухто и Эрмитажем","venueId":"venue-new-holland","city":"Санкт-Петербург"},
+    {"year": 2025,"title":"Пантеон","venueId":"venue-tsarskoye-selo","city":"Пушкин"},
+    {"year": 2024,"title":"Айболит 2024","venueId":"venue-borey","city":"Санкт-Петербург"},
+    {"year": 2024,"title":"Из ничего","venueId":"venue-cabaret-shum","city":"Санкт-Петербург"},
+    {"year": 2024,"title":"Павильон","venueId":"venue-stankozavod","city":"Самара"},
+    {"year": 2023,"title":"Цемента II","venueId":"venue-nonconformist","city":"Санкт-Петербург"},
+    {"year": 2023,"title":"Цемента II","venueId":"venue-vinzavod","city":"Москва"}
   ],
   "notes": [
     "This archive is a work in progress.",
     "Historical records preserve uncertainty rather than silently inventing missing dates or attribution.",
     "Every substantive record should acquire at least one sourceId before being treated as documented.",
+    "The official PARAZIT website is a current institutional source; Telegram is treated as a live documentary stream.",
     "The original PARAZIT website is treated as an archival object and is represented in snapshots.json."
   ],
-  "sourceIds": ["src-gisich-2014", "src-gisich-2022", "src-borey-2014", "src-supermarket-2015", "src-cosmoscow-2025", "src-wayback-2016"]
+  "sourceIds": ["src-parazit-group","src-parazit-telegram","src-gisich-2014","src-gisich-2022","src-borey-2014","src-supermarket-2015","src-cosmoscow-2025","src-wayback-2016"]
 }
