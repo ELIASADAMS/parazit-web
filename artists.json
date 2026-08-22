@@ -2,38 +2,113 @@
   "artists": [
     {
       "id": "kozin",
-      "name": "Vladimir Kozin",
-      "role": "Co-editor",
-      "bio": "Co-editor of PARAZIT collective. Specializes in trash assemblages and corridor performances using found materials from St. Petersburg streets.",
-      "portrait": "images/kozin-portrait.jpg"
+      "archiveId": "PZT-ART-001",
+      "name": "Владимир Козин",
+      "nameLatin": "Vladimir Kozin",
+      "role": "Основной автор / редактор",
+      "bio": "Один из участников PARAZIT. Работает с найденными материалами, объектами и выставочными ситуациями.",
+      "portrait": "images/kozin-portrait.jpg",
+      "status": "active"
+    },
+    {
+      "id": "nikiforov",
+      "archiveId": "PZT-ART-002",
+      "name": "Юрий Никифоров",
+      "nameLatin": "Yury Nikiforov",
+      "role": "Основной автор",
+      "bio": "Художник и участник PARAZIT.",
+      "portrait": "images/panin-portrait.jpg",
+      "status": "active"
+    },
+    {
+      "id": "kabo",
+      "archiveId": "PZT-ART-003",
+      "name": "В. Кабо",
+      "nameLatin": "V. Kabo",
+      "role": "Основной автор",
+      "bio": "Участник художественного объединения PARAZIT.",
+      "portrait": "images/panin-portrait.jpg",
+      "status": "active"
+    },
+    {
+      "id": "vislyanne",
+      "archiveId": "PZT-ART-004",
+      "name": "П. Вислянне",
+      "nameLatin": "P. Vislyanne",
+      "role": "Основной автор",
+      "bio": "Участник художественного объединения PARAZIT.",
+      "portrait": "images/panin-portrait.jpg",
+      "status": "active"
+    },
+    {
+      "id": "kashelson",
+      "archiveId": "PZT-ART-005",
+      "name": "Ю. Кашельсон",
+      "nameLatin": "Y. Kashelson",
+      "role": "Основной автор",
+      "bio": "Участник художественного объединения PARAZIT.",
+      "portrait": "images/panin-portrait.jpg",
+      "status": "active"
     },
     {
       "id": "motolyanets",
-      "name": "Semyon Motolyanets",
-      "role": "Performance Artist",
-      "bio": "Performance artist and collective organizer. Known for curating biweekly exhibitions in the tight corridor space.",
-      "portrait": "images/motolyanets-portrait.jpg"
+      "archiveId": "PZT-ART-006",
+      "name": "Д. Мотолянцев",
+      "nameLatin": "D. Motolyanets",
+      "role": "Основной автор",
+      "bio": "Художник, перформер и участник выставочной деятельности PARAZIT.",
+      "portrait": "images/motolyanets-portrait.jpg",
+      "status": "active"
+    },
+    {
+      "id": "petukhov-zelenetskiy",
+      "archiveId": "PZT-ART-007",
+      "name": "Д. Петухов, И. Зеленецкий",
+      "nameLatin": "D. Petukhov, I. Zelenetskiy",
+      "role": "Основные авторы",
+      "bio": "Участники художественного объединения PARAZIT.",
+      "portrait": "images/panin-portrait.jpg",
+      "status": "active"
+    },
+    {
+      "id": "lilo",
+      "archiveId": "PZT-ART-008",
+      "name": "В. Лило",
+      "nameLatin": "V. Lilo",
+      "role": "Основной автор / куратор",
+      "bio": "Художник и куратор выставочных проектов PARAZIT.",
+      "portrait": "images/panin-portrait.jpg",
+      "status": "active"
     },
     {
       "id": "panin",
-      "name": "Igor Panin",
-      "role": "Book Designer",
-      "bio": "Book designer and installation artist. Created PARAZIT publication (ISBN 978-5-7187-0999-5) documenting 10+ years of collective work.",
-      "portrait": "images/panin-portrait.jpg"
+      "archiveId": "PZT-ART-009",
+      "name": "Игорь Панин",
+      "nameLatin": "Igor Panin",
+      "role": "Художник / дизайнер книги",
+      "bio": "Художник и книжный дизайнер. Участвовал в создании издания PARAZIT, документирующего историю объединения.",
+      "portrait": "images/panin-portrait.jpg",
+      "status": "active"
     },
     {
       "id": "aksinya",
+      "archiveId": "PZT-ART-010",
       "name": "Ксения Макаренко",
-      "role": "Book Designer",
-      "bio": "Book designer and installation artist. Created PARAZIT publication (ISBN 978-5-7187-0999-5) documenting 10+ years of collective work.",
-      "portrait": "images/panin-portrait.jpg"
+      "nameLatin": "Kseniya Makarenko",
+      "role": "Художник / дизайнер книги",
+      "bio": "Художник и участник проектов PARAZIT.",
+      "portrait": "images/panin-portrait.jpg",
+      "status": "active"
     },
     {
-      "id": "ash",
+      "id": "shishkin-hokusai",
+      "archiveId": "PZT-ART-011",
       "name": "Александр Шишкин-Хокусай",
-      "role": "Book Designer",
-      "bio": "Book designer and installation artist. Created PARAZIT publication (ISBN 978-5-7187-0999-5) documenting 10+ years of collective work.",
-      "portrait": "images/panin-portrait.jpg"
-    },
+      "nameLatin": "Alexander Shishkin-Hokusai",
+      "role": "Художник",
+      "bio": "Художник, связанный с выставочной и издательской историей PARAZIT.",
+      "portrait": "images/panin-portrait.jpg",
+      "status": "active"
+    }
   ]
 }
