@@ -1,214 +1,260 @@
-// MAIN NAVIGATION
-document.addEventListener('DOMContentLoaded', function () {
-    const allLinks = document.querySelectorAll('.nav-link');
-    const allSections = document.querySelectorAll('.content-section');
+const state = {
+  artists: [],
+  exhibitions: [],
+  archive: { metadata: {}, timeline: [], externalProjects: [] },
+  indexTab: 'artists'
+};
 
-    allLinks.forEach(link => {
-        link.addEventListener('click', function (e) {
-            e.preventDefault();
-            const targetId = this.getAttribute('href').substring(1);
-            const targetSection = document.getElementById(targetId);
+const $ = (selector, root = document) => root.querySelector(selector);
+const $$ = (selector, root = document) => [...root.querySelectorAll(selector)];
 
-            if (targetSection) {
-                allLinks.forEach(l => l.classList.remove('active'));
-                allSections.forEach(s => s.classList.remove('active'));
-                this.classList.add('active');
-                targetSection.classList.add('active');
-                targetSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-            }
-        });
-    });
+async function loadJSON(path) {
+  const response = await fetch(path);
+  if (!response.ok) throw new Error(`Unable to load ${path}`);
+  return response.json();
+}
 
-    // LOAD DATA & POPULATE
-    loadData();
+async function init() {
+  try {
+    const [artists, exhibitions, archive] = await Promise.all([
+      loadJSON('artists.json'),
+      loadJSON('exhibitions.json'),
+      loadJSON('archive.json')
+    ]);
+    state.artists = artists.artists || [];
+    state.exhibitions = exhibitions.exhibitions || [];
+    state.archive = archive;
+  } catch (error) {
+    console.error(error);
+    $('#footerStatus').textContent = 'ARCHIVE STATUS: DATA ERROR';
+  }
 
-    // GLOBAL CLOSE HANDLER
-    document.addEventListener('click', function (e) {
-        if (e.target.classList.contains('modal-close')) {
-            closeModal();
-        }
-    });
-});
+  renderHome();
+  renderArchive();
+  renderGallery();
+  renderIndex();
+  populateYearFilter();
+  bindEvents();
+  routeFromHash();
+}
 
-// === DATA LOADING ===
-let artistData = {};
-let exhibitionData = {};
+function bindEvents() {
+  window.addEventListener('hashchange', routeFromHash);
 
-async function loadData() {
-    try {
-        // Load artists
-        const artistsResponse = await fetch('artists.json');
-        const artistsJson = await artistsResponse.json();
-        artistData = Object.fromEntries(
-            artistsJson.artists.map(artist => [artist.id, artist])
-        );
-
-        // Load exhibitions  
-        const exhibitionsResponse = await fetch('exhibitions.json');
-        const exhibitionsJson = await exhibitionsResponse.json();
-        exhibitionData = Object.fromEntries(
-            exhibitionsJson.exhibitions.map(ex => [ex.id, ex])
-        );
-
-        // Populate grids
-        populateGrids();
-
-    } catch (error) {
-        console.error('Failed to load data:', error);
-        // Fallback to hardcoded data if JSON fails
-        loadFallbackData();
+  document.addEventListener('click', event => {
+    const route = event.target.closest('[data-route]');
+    if (route) {
+      event.preventDefault();
+      location.hash = route.dataset.route;
+      return;
     }
-}
 
-function loadFallbackData() {
-    artistData = {
-        'kozin': { name: 'Vladimir Kozin', bio: 'Co-editor...', portrait: 'images/kozin-portrait.jpg' },
-        'motolyanets': { name: 'Semyon Motolyanets', bio: 'Performance artist...', portrait: 'images/motolyanets-portrait.jpg' },
-        'panin': { name: 'Igor Panin', bio: 'Book designer...', portrait: 'images/panin-portrait.jpg' }
-    };
+    const record = event.target.closest('[data-record-id]');
+    if (record) openRecord(record.dataset.recordType, record.dataset.recordId);
 
-    exhibitionData = {
-        'the-act': { title: 'THE ACT 2010', description: '...', images: ['images/the-act-1.jpg', 'images/the-act-2.jpg'] },
-        'venice-2009': { title: 'Venice Biennale 2009', description: '...', images: ['images/venice-1.jpg'] }
-    };
-
-    populateGrids();
-}
-
-// === POPULATE GRIDS ===
-function populateGrids() {
-    populateArtistGrid();
-    populateExhibitionGrid();
-}
-
-function populateArtistGrid() {
-    const artistGrid = document.querySelector('#artists .grid');
-    if (artistGrid && Object.keys(artistData).length) {
-        artistGrid.innerHTML = Object.entries(artistData).map(([id, artist]) => `
-            <a href="#" class="grid-item" data-artist="${id}">
-                <img src="${artist.portrait}" alt="${artist.name}" class="grid-image" loading="lazy">
-                <div class="grid-info">
-                    <h3 class="grid-title">${artist.name.split(' ').slice(0, 2).join(' ')}</h3>
-                    <p class="grid-subtitle">${artist.bio.split('.')[0]}</p>
-                </div>
-            </a>
-        `).join('');
-
-        artistGrid.addEventListener('click', function (e) {
-            const artistLink = e.target.closest('.grid-item[data-artist]');
-            if (artistLink) {
-                e.preventDefault();
-                document.body.insertAdjacentHTML('beforeend', createArtistModal(artistLink.dataset.artist));
-            }
-        });
+    const indexTab = event.target.closest('[data-index-tab]');
+    if (indexTab) {
+      state.indexTab = indexTab.dataset.indexTab;
+      $$('.index-tab').forEach(tab => tab.classList.toggle('active', tab === indexTab));
+      renderIndex();
     }
+  });
+
+  $('#yearFilter')?.addEventListener('change', renderArchive);
+  $('#typeFilter')?.addEventListener('change', renderArchive);
+  $('#archiveQuery')?.addEventListener('input', renderArchive);
+
+  const searchDialog = $('#searchDialog');
+  $('#globalSearch')?.addEventListener('input', event => renderSearch(event.target.value));
+  $('.search-toggle')?.addEventListener('click', () => {
+    searchDialog.showModal();
+    setTimeout(() => $('#globalSearch')?.focus(), 30);
+  });
+
+  $('#recordClose')?.addEventListener('click', () => $('#recordDialog').close());
 }
 
-function populateExhibitionGrid() {
-    const exhibitionGrid = document.querySelector('#exhibitions .grid');
-    if (exhibitionGrid && Object.keys(exhibitionData).length) {
-        exhibitionGrid.innerHTML = Object.entries(exhibitionData).map(([id, ex]) => {
-            const year = ex.year || ex.title.match(/\d{4}/)?.[0] || '2020';
-            const shortTitle = ex.title.replace(/\s*\d{4}.*/, '').trim();
-
-            return `
-                <a href="#" class="grid-item" data-exhibition="${id}">
-                    <div class="image-container">
-                        <img src="${ex.images[0]}" alt="${ex.title}" class="grid-image" loading="lazy">
-                        <span class="year-badge">${year}</span>
-                    </div>
-                    <div class="grid-info">
-                        <h3 class="grid-title">${shortTitle}</h3>
-                        <p class="grid-subtitle">Exhibition</p>
-                    </div>
-                </a>
-            `;
-        }).join('');
-
-        exhibitionGrid.addEventListener('click', function (e) {
-            const exhibitionLink = e.target.closest('.grid-item[data-exhibition]');
-            if (exhibitionLink) {
-                e.preventDefault();
-                document.body.insertAdjacentHTML('beforeend', createExhibitionModal(exhibitionLink.dataset.exhibition));
-            }
-        });
-    }
+function routeFromHash() {
+  const route = location.hash.replace('#', '') || 'home';
+  const allowed = ['home', 'archive', 'gallery', 'index', 'about'];
+  const view = allowed.includes(route) ? route : 'home';
+  $$('.view').forEach(section => section.classList.toggle('active', section.dataset.view === view));
+  $$('.primary-nav [data-route]').forEach(link => link.classList.toggle('active', link.dataset.route === view));
+  $('#app')?.focus({ preventScroll: true });
+  window.scrollTo({ top: 0, behavior: 'smooth' });
 }
 
-// === MODAL CREATION ===
-function createArtistModal(artistId) {
-    const data = artistData[artistId];
-    if (!data) return '';
+function renderHome() {
+  const latest = [...state.exhibitions].sort((a, b) => Number(b.year) - Number(a.year)).slice(0, 3);
+  $('#latestExhibitions').innerHTML = latest.map(exhibitionCard).join('');
 
-    return `
-        <div class="artist-modal-overlay" onclick="closeModal(event)">
-            <div class="artist-modal modal" onclick="event.stopPropagation()">
-                <button class="modal-close" onclick="closeModal()">&times;</button>
-                <div class="artist-modal-content modal-content">
-                    <img src="${data.portrait}" alt="${data.name}" class="artist-photo">
-                    <div class="artist-info">
-                        <h3>${data.name}</h3>
-                        <p>${data.bio}</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    `;
+  const timeline = state.archive.timeline || [];
+  $('#timelineMini').innerHTML = timeline.slice(-5).map(item => `
+    <article class="timeline-item">
+      <div class="timeline-year">${item.year}</div>
+      <div class="timeline-title">${escapeHTML(item.title)}</div>
+      <p>${escapeHTML(item.description)}</p>
+    </article>
+  `).join('');
+
+  const featured = state.exhibitions.find(item => item.id === 'venice-2009') || latest[0];
+  if (featured) {
+    $('#featureId').textContent = featured.archiveId || 'PZT-EXH';
+    $('#featureTitle').textContent = featured.title;
+    $('#featureYear').textContent = featured.year;
+    $('#featureImage').src = featured.images?.[0] || '';
+    $('#featureImage').alt = featured.title;
+  }
+
+  $('#roster').innerHTML = state.artists.slice(0, 10).map((artist, index) => `<li>${escapeHTML(artist.name)}</li>`).join('');
+  $('#rosterCount').textContent = String(state.artists.length).padStart(2, '0');
+
+  const years = new Set(state.exhibitions.map(item => item.year));
+  $('#stats').innerHTML = [
+    ['00' + state.artists.length, 'ARTISTS'],
+    [String(state.exhibitions.length).padStart(3, '0'), 'EXHIBITIONS'],
+    [String(state.exhibitions.reduce((sum, item) => sum + (item.images?.length || 0), 0)).padStart(3, '0'), 'IMAGES'],
+    [years.size, 'YEARS INDEXED']
+  ].map(([value, label]) => `<div class="stat"><strong>${value}</strong><span>${label}</span></div>`).join('');
 }
 
-
-function createExhibitionModal(exhibitionId) {
-    const data = exhibitionData[exhibitionId];
-    if (!data) return '';
-
-    currentExhibition = data;
-    currentExhibitionIndex = 0;
-
-    return `
-        <div class="exhibition-modal-overlay" onclick="closeModal(event)">
-            <div class="exhibition-modal" onclick="event.stopPropagation()">
-                <button class="modal-close" onclick="closeModal()">&times;</button>
-                <h3>${data.title}</h3>
-                <p>${data.description}</p>
-                <div class="carousel-container">
-                    <button class="carousel-prev" onclick="moveCarousel(-1)">‹</button>
-                    <img src="${data.images[0]}" class="carousel-image" id="carousel-img">
-                    <button class="carousel-next" onclick="moveCarousel(1)">›</button>
-                </div>
-                <div class="carousel-dots" id="carousel-dots"></div>
-            </div>
-        </div>
-    `;
+function exhibitionCard(exhibition) {
+  return `<a class="record-card" href="#gallery" data-route="gallery" data-record-id="${exhibition.id}" data-record-type="exhibition">
+    <img class="record-image" src="${escapeAttribute(exhibition.images?.[0] || '')}" alt="${escapeAttribute(exhibition.title)}" loading="lazy">
+    <div class="record-info">
+      <div class="record-id">${escapeHTML(exhibition.archiveId || 'PZT-EXH')}</div>
+      <div class="record-title">${escapeHTML(exhibition.title)}</div>
+      <div class="record-meta">${exhibition.year} / ${escapeHTML(exhibition.city || '—')} / ${escapeHTML(exhibition.type || 'record')}</div>
+    </div>
+  </a>`;
 }
 
-function closeModal(event) {
-    document.querySelectorAll('[class*="modal-overlay"]').forEach(overlay => overlay.remove());
+function renderArchive() {
+  const query = ($('#archiveQuery')?.value || '').trim().toLowerCase();
+  const year = $('#yearFilter')?.value || 'all';
+  const type = $('#typeFilter')?.value || 'all';
+
+  let records = state.exhibitions.filter(item => {
+    const haystack = JSON.stringify(item).toLowerCase();
+    return (year === 'all' || String(item.year) === year) && (type === 'all' || item.type === type) && (!query || haystack.includes(query));
+  });
+
+  const timelineRecords = (state.archive.timeline || []).filter(item => {
+    const haystack = JSON.stringify(item).toLowerCase();
+    return (!query || haystack.includes(query)) && (year === 'all' || String(item.year) === year) && (type === 'all' || item.type === type);
+  }).map(item => ({ ...item, archiveId: `PZT-TIM-${item.year}`, id: `timeline-${item.year}` }));
+
+  const combined = [...records.map(item => ({ ...item, source: 'exhibition' })), ...timelineRecords.map(item => ({ ...item, source: 'timeline' }))]
+    .sort((a, b) => Number(b.year) - Number(a.year));
+
+  $('#archiveResults').innerHTML = combined.length ? combined.map(archiveRow).join('') : '<div class="archive-empty">NO RECORDS FOUND.</div>';
 }
 
-// === CAROUSEL ===
-let currentExhibitionIndex = 0;
-let currentExhibition = null;
-
-function moveCarousel(direction) {
-    currentExhibitionIndex += direction;
-    if (currentExhibitionIndex >= currentExhibition.images.length) currentExhibitionIndex = 0;
-    if (currentExhibitionIndex < 0) currentExhibitionIndex = currentExhibition.images.length - 1;
-
-    document.getElementById('carousel-img').src = currentExhibition.images[currentExhibitionIndex];
-    updateCarouselDots();
+function archiveRow(record) {
+  return `<a class="archive-record" href="#archive" data-record-id="${record.id}" data-record-type="${record.source}">
+    <div class="archive-year">${record.year || '—'}</div>
+    <div class="archive-id">${escapeHTML(record.archiveId || 'PZT')}</div>
+    <div class="archive-title">${escapeHTML(record.title)}</div>
+    <div class="archive-meta">${escapeHTML(record.venue || record.city || record.type || '')}</div>
+  </a>`;
 }
 
-function updateCarouselDots() {
-    const dotsContainer = document.getElementById('carousel-dots');
-    if (dotsContainer) {
-        dotsContainer.innerHTML = currentExhibition.images.map((_, i) =>
-            `<span class="dot ${i === currentExhibitionIndex ? 'active' : ''}" onclick="goToSlide(${i})"></span>`
-        ).join('');
-    }
+function populateYearFilter() {
+  const years = [...new Set([
+    ...state.exhibitions.map(item => item.year),
+    ...(state.archive.timeline || []).map(item => item.year)
+  ])].sort((a, b) => b - a);
+  $('#yearFilter').innerHTML = '<option value="all">ALL</option>' + years.map(year => `<option value="${year}">${year}</option>`).join('');
 }
 
-function goToSlide(index) {
-    currentExhibitionIndex = index;
-    document.getElementById('carousel-img').src = currentExhibition.images[index];
-    updateCarouselDots();
+function renderGallery() {
+  const items = [];
+  state.exhibitions.forEach(exhibition => {
+    (exhibition.images || []).forEach((image, index) => items.push({ exhibition, image, index }));
+  });
+  $('#galleryGrid').innerHTML = items.map(({ exhibition, image, index }) => `
+    <article class="gallery-item" data-record-id="${exhibition.id}" data-record-type="exhibition">
+      <img src="${escapeAttribute(image)}" alt="${escapeAttribute(exhibition.title)} — image ${index + 1}" loading="lazy">
+      <div class="gallery-caption"><strong>${escapeHTML(exhibition.title)}</strong><span>${exhibition.year}</span></div>
+    </article>
+  `).join('');
 }
+
+function renderIndex() {
+  const container = $('#indexContent');
+  if (state.indexTab === 'artists') {
+    container.innerHTML = `<div class="index-list">${state.artists.map((artist, index) => `
+      <article class="index-row" data-record-id="${artist.id}" data-record-type="artist">
+        <div class="index-num">[${String(index + 1).padStart(2, '0')}]<br>${escapeHTML(artist.archiveId || '')}</div>
+        <div class="index-name">${escapeHTML(artist.name)}</div>
+        <div class="index-role">${escapeHTML(artist.role || '')}</div>
+      </article>`).join('')}</div>`;
+  } else {
+    const records = [...state.exhibitions].sort((a, b) => Number(b.year) - Number(a.year));
+    container.innerHTML = `<div class="index-list">${records.map((record, index) => `
+      <article class="index-row" data-record-id="${record.id}" data-record-type="exhibition">
+        <div class="index-num">[${String(index + 1).padStart(2, '0')}]<br>${escapeHTML(record.archiveId || '')}</div>
+        <div class="index-name">${escapeHTML(record.title)}</div>
+        <div class="index-role">${record.year} / ${escapeHTML(record.type || '')}</div>
+      </article>`).join('')}</div>`;
+  }
+}
+
+function openRecord(type, id) {
+  const dialog = $('#recordDialog');
+  const detail = $('#recordDetail');
+  let record;
+
+  if (type === 'artist') record = state.artists.find(item => item.id === id);
+  else if (type === 'timeline') record = state.archive.timeline.find(item => `timeline-${item.year}` === id);
+  else record = state.exhibitions.find(item => item.id === id);
+  if (!record) return;
+
+  const isArtist = type === 'artist';
+  const image = isArtist ? record.portrait : record.images?.[0];
+  detail.innerHTML = `<div class="detail-head">
+    <span class="eyebrow">${escapeHTML(record.archiveId || 'PARAZIT RECORD')} / ${escapeHTML(type)}</span>
+    <h2>${escapeHTML(record.title || record.name)}</h2>
+    <p>${escapeHTML(record.description || record.bio || '')}</p>
+  </div>
+  ${image ? `<img class="detail-image" src="${escapeAttribute(image)}" alt="${escapeAttribute(record.title || record.name)}">` : ''}
+  <div class="detail-grid">
+    ${detailCell('YEAR', record.year)}
+    ${detailCell('ROLE', record.role)}
+    ${detailCell('TYPE', record.type)}
+    ${detailCell('VENUE', record.venue)}
+    ${detailCell('CITY', record.city)}
+    ${detailCell('CURATOR', record.curator)}
+    ${detailCell('DATES', record.start && record.end ? `${record.start} — ${record.end}` : '')}
+    ${detailCell('STATUS', record.status || 'ARCHIVE RECORD')}
+  </div>`;
+  dialog.showModal();
+}
+
+function detailCell(label, value) {
+  if (!value) return '';
+  return `<div class="detail-cell"><span>${label}</span>${escapeHTML(value)}</div>`;
+}
+
+function renderSearch(query) {
+  const q = query.trim().toLowerCase();
+  if (!q) {
+    $('#searchResults').innerHTML = '<div class="archive-empty">TYPE TO SEARCH THE ARCHIVE.</div>';
+    return;
+  }
+
+  const artists = state.artists.filter(item => JSON.stringify(item).toLowerCase().includes(q)).map(item => ({ type: 'artist', id: item.id, title: item.name, meta: item.role }));
+  const exhibitions = state.exhibitions.filter(item => JSON.stringify(item).toLowerCase().includes(q)).map(item => ({ type: 'exhibition', id: item.id, title: item.title, meta: `${item.year} / ${item.city || ''}` }));
+  const timeline = (state.archive.timeline || []).filter(item => JSON.stringify(item).toLowerCase().includes(q)).map(item => ({ type: 'timeline', id: `timeline-${item.year}`, title: item.title, meta: item.year }));
+  const results = [...artists, ...exhibitions, ...timeline].slice(0, 20);
+
+  $('#searchResults').innerHTML = results.length ? results.map(item => `<a href="#${item.type === 'artist' ? 'index' : 'archive'}" class="search-result" data-record-id="${item.id}" data-record-type="${item.type}"><strong>${escapeHTML(item.title)}</strong><br><small>${escapeHTML(item.type)} / ${escapeHTML(item.meta || '')}</small></a>`).join('') : '<div class="archive-empty">NO MATCHES.</div>';
+}
+
+function escapeHTML(value = '') {
+  return String(value).replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
+}
+
+function escapeAttribute(value = '') { return escapeHTML(value); }
+
+document.addEventListener('DOMContentLoaded', init);
