@@ -1,0 +1,58 @@
+{
+  "metadata": {
+    "name": "PARAZIT DIGITAL ARCHIVE",
+    "archiveId": "PZT-ARC-000",
+    "established": 2000,
+    "activitySince": 2004,
+    "location": "Санкт-Петербург, Россия",
+    "status": "ACTIVE"
+  },
+  "timeline": [
+    {
+      "year": 2000,
+      "type": "origin",
+      "title": "PARAZIT",
+      "description": "Название PARAZIT появляется в истории объединения художников, позднее связанного с программой «Искусство в массы»."
+    },
+    {
+      "year": 2004,
+      "type": "gallery",
+      "title": "Галерея Борей",
+      "description": "PARAZIT начинает непрерывную выставочную деятельность в пространстве галереи «Борей» в Санкт-Петербурге."
+    },
+    {
+      "year": 2009,
+      "type": "project",
+      "title": "Venice Biennale",
+      "description": "Проект PARAZIT, связанный с Венецианской биеннале."
+    },
+    {
+      "year": 2022,
+      "type": "venue",
+      "title": "НИИ PARAZIT",
+      "description": "У PARAZIT появляется собственное пространство на улице Рентгена, 4 в Санкт-Петербурге."
+    },
+    {
+      "year": 2025,
+      "type": "activity",
+      "title": "PARAZIT / 2025",
+      "description": "Продолжается выставочная, кураторская и ярмарочная деятельность объединения."
+    }
+  ],
+  "externalProjects": [
+    {"year": 2025, "title": "Кабинет психотерапевта", "venue": "Eggz Gallery", "city": "Санкт-Петербург"},
+    {"year": 2025, "title": "Между пухто и Эрмитажем", "venue": "Новая Голландия", "city": "Санкт-Петербург"},
+    {"year": 2025, "title": "Пантеон", "venue": "Государственный музей «Царскосельская коллекция»", "city": "Пушкин"},
+    {"year": 2024, "title": "Айболит 2024", "venue": "Галерея Борей", "city": "Санкт-Петербург"},
+    {"year": 2024, "title": "Из ничего", "venue": "Кабаре Шум", "city": "Санкт-Петербург"},
+    {"year": 2024, "title": "Павильон", "venue": "Станкозавод", "city": "Самара"},
+    {"year": 2023, "title": "Цемента II", "venue": "Музей нонконформистского искусства", "city": "Санкт-Петербург"},
+    {"year": 2023, "title": "Цемента II", "venue": "Винзавод", "city": "Москва"},
+    {"year": 2022, "title": "Communication", "venue": "Studio44", "city": "Стокгольм"}
+  ],
+  "notes": [
+    "This archive is a work in progress.",
+    "Historical records should preserve uncertainty rather than silently invent missing dates or attribution.",
+    "The original PARAZIT website is treated as an archival object and should be reconstructed separately."
+  ]
+}
