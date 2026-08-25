@@ -1,0 +1,24 @@
+{
+  "updated": "2026-08-25",
+  "textMaterials": [
+    {"title":"The PARAZIT","path":"notes/the-parazit.md","category":"history / theory"},
+    {"title":"Historical note","path":"notes/historical-note.md","category":"history"},
+    {"title":"Exhibitions / PARAZIT","path":"notes/exhibitions-parazit.md","category":"exhibitions"},
+    {"title":"Truth about Cement","path":"notes/truth-about-cement.md","category":"projects"},
+    {"title":"Duraki i dury / curatorial","path":"notes/duraki-i-dury-curational.md","category":"curatorial"},
+    {"title":"Chinese Pavilion","path":"notes/chinese-pavilion.md","category":"projects"},
+    {"title":"Museum of the World / PARAZIT","path":"notes/museum-of-the-world-parazit.md","category":"projects"},
+    {"title":"Motivational letter","path":"notes/motivational-letter.md","category":"documents"},
+    {"title":"Anna Matveeva — text archive","path":"notes/texts/anna-matveeva.md","category":"texts"},
+    {"title":"Semen Motolyanets — text archive","path":"notes/texts/semen-motolyanets.md","category":"texts"},
+    {"title":"Sergey Spirikhin — text archive","path":"notes/texts/sergey-spirikhin.md","category":"texts"},
+    {"title":"Vladimir Kozin — text archive","path":"notes/texts/vladimir-kozin.md","category":"texts"}
+  ],
+  "imageCollections": [
+    {"title":"10 новых плохих работ","folder":"images/10 новых плохих работ","preview":"images/10 новых плохих работ/001.JPG","note":"Newly uploaded photographic material; individual attribution is not inferred from filenames."},
+    {"title":"Выставка реди-мейдов / Рентгена 4","folder":"images/07.25 вернисаж выставки реди-мейдов на Рентгена 4","preview":"images/07.25 вернисаж выставки реди-мейдов на Рентгена 4/2026-08-23-0001.jpg","note":"Opening documentation uploaded with the 2026 archive material."},
+    {"title":"МАНИФЕСТА-МАРАТ / квартирник","folder":"images/МАНИФЕСТА-МАРАТ/МАНИФЕСТА2014-08-29/манифеста-квартирник","preview":"images/МАНИФЕСТА-МАРАТ/МАНИФЕСТА2014-08-29/манифеста-квартирник/008.JPG","note":"Historical photographic material; preserved as a source collection."},
+    {"title":"Нот тупости к паразитизму / 2012","folder":"images/Нот тупости к паразитизму 2012овая папка","preview":"images/Нот тупости к паразитизму 2012овая папка/001.JPG","note":"Historical documentation; filenames are retained rather than normalized into invented captions."},
+    {"title":"Loose archive images","folder":"images","preview":"images/010.JPG","note":"Top-level image material requiring later record-level attribution."}
+  ]
+}
