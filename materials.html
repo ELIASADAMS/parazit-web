@@ -1,51 +1,19 @@
 <!doctype html>
 <html lang="ru">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta name="description" content="PARAZIT digital archive — newly ingested texts and image collections.">
-  <title>PARAZIT / MATERIALS</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="PARAZIT digital archive — texts and automatically detected image collections."><title>PARAZIT / MATERIALS</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=Oswald:wght@400;500;600;700&display=swap" rel="stylesheet"><link rel="stylesheet" href="styles.css">
   <style>
-    .materials-page{padding:28px 0 70px}.materials-intro{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-bottom:24px}.materials-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.material-card{border:1px solid var(--line,#111);background:var(--paper,#f4f1e8);padding:16px;min-height:150px}.material-card h3{font-family:Oswald,sans-serif;text-transform:uppercase;font-size:22px;line-height:1.05;margin:8px 0}.material-card p{font-size:12px;line-height:1.55}.material-card .eyebrow{font-size:10px}.material-card a{display:inline-block;margin-top:12px}.material-image{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line,#111);display:block;margin-bottom:12px;background:#ddd}.materials-section{margin-top:32px}.materials-section .section-title{margin-bottom:12px}.materials-meta{font-size:11px;opacity:.7}.materials-back{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:18px}@media(max-width:900px){.materials-intro,.materials-grid{grid-template-columns:1fr}.materials-grid{gap:10px}}
+    .materials-page{padding:28px 0 70px}.materials-intro{display:grid;grid-template-columns:1.2fr .8fr;gap:16px;margin-bottom:24px}.materials-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}.material-card{border:1px solid var(--line,#111);background:var(--paper,#f4f1e8);padding:16px;min-height:170px}.material-card h3{font-family:Oswald,sans-serif;text-transform:uppercase;font-size:22px;line-height:1.05;margin:8px 0}.material-card p{font-size:12px;line-height:1.55}.material-card .eyebrow{font-size:10px}.material-card button{margin-top:12px}.material-image{width:100%;aspect-ratio:4/3;object-fit:cover;border:1px solid var(--line,#111);display:block;margin-bottom:12px;background:#ddd}.materials-section{margin-top:32px}.materials-section .section-title{margin-bottom:12px}.materials-meta{font-size:11px;opacity:.7}.materials-back{display:flex;justify-content:space-between;gap:12px;align-items:center;margin-bottom:18px}.material-dialog{width:min(1200px,94vw);max-height:92vh;padding:28px;background:var(--paper,#f4f1e8);border:1px solid var(--line,#111)}.material-dialog::backdrop{background:rgba(0,0,0,.72)}.material-dialog h2{font-family:Oswald,sans-serif;font-size:clamp(34px,6vw,76px);line-height:.95;margin:8px 0 18px;text-transform:uppercase}.material-reading{max-width:850px;font-size:14px;line-height:1.7;max-height:65vh;overflow:auto;border-top:1px solid var(--line);padding-top:20px}.material-reading h2,.material-reading h3,.material-reading h4{font-family:Oswald,sans-serif;line-height:1.05;text-transform:uppercase}.material-reading blockquote{border-left:4px solid var(--red,#ed1010);padding-left:16px;margin-left:0}.material-reading li{margin-bottom:5px}.collection-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px;max-height:70vh;overflow:auto}.collection-grid figure{margin:0;border:1px solid var(--line,#111);background:#fff}.collection-grid img{display:block;width:100%;aspect-ratio:1/1;object-fit:cover}.collection-grid figcaption{padding:5px 7px;font-size:10px}.system-action{display:inline-flex;align-items:center;justify-content:center;padding:8px 10px;border:1px solid currentColor;background:transparent;text-decoration:none;cursor:pointer}.system-action:hover{background:var(--black,#111);color:var(--white,#fff)}@media(max-width:900px){.materials-intro,.materials-grid{grid-template-columns:1fr}.collection-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
   </style>
 </head>
-<body>
-<div class="site-shell">
-  <header class="masthead">
-    <a class="brand" href="index.html#home">PARAZIT</a>
-    <nav class="primary-nav" aria-label="Main navigation">
-      <a href="index.html#archive">ARCHIVE</a>
-      <a href="index.html#gallery">GALLERY</a>
-      <a href="index.html#index">INDEX</a>
-      <a href="materials.html" aria-current="page">MATERIALS</a>
-      <a href="index.html#about">ABOUT</a>
-    </nav>
-    <div class="header-actions">
-      <a class="header-external" href="https://parazit.group/" target="_blank" rel="noopener">OFFICIAL SITE ↗</a>
-      <a class="header-external" href="https://t.me/PARAZIT_Group" target="_blank" rel="noopener">TELEGRAM ↗</a>
-    </div>
-  </header>
-  <div class="system-strip"><div class="ticker">PARAZIT MATERIALS • SOURCE-FIRST INGESTION • 2026-08-25 •</div></div>
-  <main class="materials-page">
-    <div class="materials-back"><a class="system-action" href="index.html#home">← BACK TO ARCHIVE</a><span class="materials-meta" id="updated"></span></div>
-    <div class="materials-intro">
-      <section class="module red-module"><span class="module-code">PZT-MAT / INGESTION</span><h1>MATERIALS</h1><p>Новый слой архива: тексты, исследовательские заметки и большие фотоколлекции, которые уже загружены в репозиторий, но ещё не получили полную record-level разметку.</p><p>На этом этапе ничего не переименовываем и не приписываем без источника. Материал сначала становится видимым, затем связывается с конкретными художниками, выставками, произведениями и документами.</p></section>
-      <section class="module info-module"><div class="module-head"><span>INGESTION.STATUS</span><span>STEP 01</span></div><p><strong>TEXT</strong> — индексирован как отдельный материал.<br><strong>IMAGE</strong> — показаны коллекции и репрезентативные кадры.<br><strong>ATTRIBUTION</strong> — не выдумывается по имени файла.</p></section>
-    </div>
-    <section class="materials-section"><div class="section-title"><span>TEXT MATERIALS</span><span id="textCount"></span></div><div id="texts" class="materials-grid"></div></section>
-    <section class="materials-section"><div class="section-title"><span>IMAGE COLLECTIONS</span><span id="imageCount"></span></div><div id="images" class="materials-grid"></div></section>
-  </main>
-  <footer class="footer"><span>PARAZIT / DIGITAL ARCHIVE</span><span>PROVENANCE PRESERVED</span><span><a href="index.html#archive">ARCHIVE ↗</a></span></footer>
-</div>
-<script>
-const esc=v=>String(v??'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
-const gh=p=>`https://github.com/ELIASADAMS/parazit-web/blob/main/${p.split('/').map(encodeURIComponent).join('/')}`;
-async function init(){const data=await fetch('materials.json',{cache:'no-store'}).then(r=>r.json());document.getElementById('updated').textContent='UPDATED '+data.updated;document.getElementById('textCount').textContent=String(data.textMaterials.length).padStart(2,'0');document.getElementById('imageCount').textContent=String(data.imageCollections.length).padStart(2,'0');document.getElementById('texts').innerHTML=data.textMaterials.map((x,i)=>`<article class="material-card"><span class="eyebrow">TEXT / ${String(i+1).padStart(2,'0')}</span><h3>${esc(x.title)}</h3><p>${esc(x.category)}</p><a class="external-link" href="${gh(x.path)}" target="_blank" rel="noopener">OPEN SOURCE ↗</a></article>`).join('');document.getElementById('images').innerHTML=data.imageCollections.map((x,i)=>`<article class="material-card"><img class="material-image" src="${esc(x.preview)}" alt="${esc(x.title)}" loading="lazy"><span class="eyebrow">IMAGE SET / ${String(i+1).padStart(2,'0')}</span><h3>${esc(x.title)}</h3><p>${esc(x.note)}</p><a class="external-link" href="${gh(x.folder)}" target="_blank" rel="noopener">OPEN COLLECTION ↗</a></article>`).join('')}
-init().catch(e=>{document.getElementById('texts').textContent='MATERIAL REGISTRY ERROR';console.error(e)});
-</script>
-</body>
-</html>
+<body><div class="site-shell">
+  <header class="masthead"><a class="brand" href="index.html#home">PARAZIT</a><nav class="primary-nav" aria-label="Main navigation"><a href="index.html#archive">ARCHIVE</a><a href="index.html#gallery">GALLERY</a><a href="index.html#index">INDEX</a><a href="materials.html" aria-current="page">MATERIALS</a><a href="index.html#about">ABOUT</a></nav><div class="header-actions"><a class="header-external" href="https://parazit.group/" target="_blank" rel="noopener">OFFICIAL SITE ↗</a><a class="header-external" href="https://t.me/PARAZIT_Group" target="_blank" rel="noopener">TELEGRAM ↗</a></div></header>
+  <div class="system-strip"><div class="ticker">PARAZIT MATERIALS • AUTO-DETECTED COLLECTIONS • SOURCE-FIRST •</div></div>
+  <main class="materials-page"><div class="materials-back"><a class="system-action" href="index.html#home">← BACK TO ARCHIVE</a><span class="materials-meta" id="updated"></span></div>
+    <div class="materials-intro"><section class="module red-module"><span class="module-code">PZT-MAT / BROWSER</span><h1>MATERIALS</h1><p>Тексты открываются прямо внутри сайта. Фотоколлекции обнаруживаются автоматически по структуре папки <strong>images/</strong>, поэтому новые папки не требуют ручного добавления в этот интерфейс.</p></section><section class="module info-module"><div class="module-head"><span>DETECTOR</span><span>LIVE</span></div><p><strong>IMAGE FOLDERS</strong> — сканируются из Git tree.<br><strong>BIG ARCHIVE</strong> — показывается отдельно и не входит в счёт выставочных папок.<br><strong>ATTRIBUTION</strong> — названия папок сохраняются как источник.</p></section></div>
+    <section class="materials-section"><div class="section-title"><span>TEXT MATERIALS / ON SITE</span><span id="textCount"></span></div><div id="texts" class="materials-grid"></div></section>
+    <section class="materials-section"><div class="section-title"><span>IMAGE COLLECTIONS / AUTO-DETECTED</span><span id="imageCount"></span></div><div id="images" class="materials-grid"></div></section>
+  </main><footer class="footer"><span>PARAZIT / DIGITAL ARCHIVE</span><span>PROVENANCE PRESERVED</span><span><a href="index.html#archive">ARCHIVE ↗</a></span></footer>
+</div><script src="material-browser.js"></script></body></html>
