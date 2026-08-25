@@ -1,0 +1,28 @@
+{
+  "artists": [
+    {
+      "id": "anna-matveeva",
+      "archiveId": "PZT-ART-079",
+      "name": "Анна Матвеева",
+      "role": "writer / critic / author on PARAZIT",
+      "status": "text-documented",
+      "materialIds": ["text-anna-matveeva"],
+      "notes": "Автор текста «Облачное сообщество» о PARAZIT; текст рассматривает историю объединения, его связь с «Новыми тупыми», смену состава и практику паразитических выставочных пространств."
+    },
+    {
+      "id": "sergey-spirikhin",
+      "archiveId": "PZT-ART-080",
+      "name": "Сергей Спирихин",
+      "role": "artist / writer / PARAZIT participant",
+      "status": "text-documented",
+      "materialIds": ["text-sergey-spirikhin"],
+      "notes": "Автор текста «От ПЭ до ПЭ» о происхождении и художественной логике PARAZIT; текст напрямую связывает историю объединения с практикой «Новых тупых» и туалетных выставок."
+    }
+  ],
+  "materials": [
+    {"id":"text-anna-matveeva","title":"Anna Matveeva — text archive","path":"notes/texts/anna-matveeva.md"},
+    {"id":"text-semen-motolyanets","title":"Semen Motolyanets — text archive","path":"notes/texts/semen-motolyanets.md","artistId":"motolyanets"},
+    {"id":"text-sergey-spirikhin","title":"Sergey Spirikhin — text archive","path":"notes/texts/sergey-spirikhin.md"},
+    {"id":"text-vladimir-kozin","title":"Vladimir Kozin — text archive","path":"notes/texts/vladimir-kozin.md","artistId":"kozin"}
+  ]
+}
