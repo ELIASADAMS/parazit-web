@@ -1,0 +1,105 @@
+{
+  "updated": "2026-08-25",
+  "relations": [
+    {
+      "material": {"kind":"imageCollection","title":"10 новых плохих работ","folder":"images/10 новых плохих работ"},
+      "records": [
+        {"type":"exhibition","id":"exh-bad-works-2015","relation":"documents","confidence":"strong","sourceIds":["src-borey-2015"]},
+        {"type":"document","id":"doc-borey-10-bad-works","relation":"documented-by","confidence":"strong","sourceIds":["src-borey-2015"]}
+      ],
+      "note":"Folder title matches the documented 2015 PARAZIT exhibition record and its Borey exhibition page. No individual artists are inferred from filenames."
+    },
+    {
+      "material": {"kind":"imageCollection","title":"Выставка реди-мейдов / Рентгена 4","folder":"images/07.25 вернисаж выставки реди-мейдов на Рентгена 4","imageCount":39},
+      "records": [
+        {"type":"exhibition","id":"exh-readymades-2025","relation":"opening-documentation","confidence":"strong","sourceIds":["src-parazit-group"]},
+        {"type":"venue","id":"venue-nii-parazit","relation":"location-context","confidence":"strong","sourceIds":["src-parazit-group"]}
+      ],
+      "note":"The newly uploaded folder explicitly names Rentgena 4 / NII PARAZIT. The existing exhibition record currently lists Borey; the conflict is preserved rather than silently overwriting the existing source-derived field."
+    },
+    {
+      "material": {"kind":"imageCollection","title":"МАНИФЕСТА-МАРАТ / квартирник","folder":"images/МАНИФЕСТА-МАРАТ/МАНИФЕСТА2014-08-29/манифеста-квартирник"},
+      "records": [
+        {"type":"document","id":"doc-parazit-book-2021","relation":"historical-context","confidence":"tentative","sourceIds":["src-2021-book"]}
+      ],
+      "note":"Historical photographic collection dated in the folder as 2014-08-29. It is linked to the 2000–2015 documentary publication only as historical context; no exhibition or artist attribution is fabricated."
+    },
+    {
+      "material": {"kind":"imageCollection","title":"Нот тупости к паразитизму / 2012","folder":"images/Нот тупости к паразитизму 2012овая папка"},
+      "records": [
+        {"type":"document","id":"doc-parazit-book-2021","relation":"historical-context","confidence":"tentative","sourceIds":["src-2021-book"]}
+      ],
+      "note":"Historical collection is explicitly dated 2012 by its folder name. It remains unassigned to an individual exhibition until a documentary source confirms the exact record."
+    },
+    {
+      "material": {"kind":"text","path":"notes/truth-about-cement.md","title":"Truth about Cement"},
+      "records": [
+        {"type":"exhibition","id":"exh-cementa-2014","relation":"text-context","confidence":"strong","sourceIds":["src-borey-2014"]}
+      ],
+      "note":"Title directly identifies the Cementa project; connected to the documented 2014 Cementa exhibition without assigning authorship to the text."
+    },
+    {
+      "material": {"kind":"text","path":"notes/chinese-pavilion.md","title":"Chinese Pavilion"},
+      "records": [
+        {"type":"exhibition","id":"exh-pavilion-2024","relation":"text-context","confidence":"strong","sourceIds":["src-parazit-group"]}
+      ],
+      "note":"Connected to the documented 2024 Pavilion project."
+    },
+    {
+      "material": {"kind":"text","path":"notes/exhibitions-parazit.md","title":"Exhibitions / PARAZIT"},
+      "records": [
+        {"type":"document","id":"doc-parazit-book-2021","relation":"chronological-context","confidence":"documented","sourceIds":["src-2021-book"]}
+      ],
+      "note":"General exhibition chronology; kept as contextual research rather than duplicated into individual exhibition descriptions."
+    },
+    {
+      "material": {"kind":"text","path":"notes/the-parazit.md","title":"The PARAZIT"},
+      "records": [
+        {"type":"document","id":"doc-parazit-book-2021","relation":"historical-context","confidence":"documented","sourceIds":["src-2021-book"]}
+      ],
+      "note":"General historical/theoretical material attached to the core PARAZIT publication record."
+    },
+    {
+      "material": {"kind":"text","path":"notes/historical-note.md","title":"Historical note"},
+      "records": [
+        {"type":"document","id":"doc-parazit-book-2021","relation":"historical-context","confidence":"documented","sourceIds":["src-2021-book"]}
+      ],
+      "note":"Historical research layer; not duplicated into individual records."
+    },
+    {
+      "material": {"kind":"text","path":"notes/duraki-i-dury-curational.md","title":"Duraki i dury / curatorial"},
+      "records": [],
+      "note":"Curatorial text retained as an independent material until a specific exhibition/document relationship is confirmed."
+    },
+    {
+      "material": {"kind":"text","path":"notes/motivational-letter.md","title":"Motivational letter"},
+      "records": [],
+      "note":"Documentary text retained independently; no unsupported recipient/event attribution."
+    },
+    {
+      "material": {"kind":"text","path":"notes/museum-of-the-world-parazit.md","title":"Museum of the World / PARAZIT"},
+      "records": [],
+      "note":"Project text retained independently until an exact exhibition/project record is confirmed."
+    },
+    {
+      "material": {"kind":"text","path":"notes/texts/anna-matveeva.md","title":"Anna Matveeva — text archive"},
+      "records": [{"type":"artist","id":"anna-matveeva","relation":"artist-text-archive","confidence":"strong"}],
+      "note":"Filename provides the artist identity; the text is linked to the artist record, not treated as an authored artwork."
+    },
+    {
+      "material": {"kind":"text","path":"notes/texts/semen-motolyanets.md","title":"Semen Motolyanets — text archive"},
+      "records": [{"type":"artist","id":"motolyanets","relation":"artist-text-archive","confidence":"strong"}],
+      "note":"Filename provides the artist identity."
+    },
+    {
+      "material": {"kind":"text","path":"notes/texts/sergey-spirikhin.md","title":"Sergey Spirikhin — text archive"},
+      "records": [{"type":"artist","id":"sergey-spirikhin","relation":"artist-text-archive","confidence":"strong"}],
+      "note":"Filename provides the artist identity."
+    },
+    {
+      "material": {"kind":"text","path":"notes/texts/vladimir-kozin.md","title":"Vladimir Kozin — text archive"},
+      "records": [{"type":"artist","id":"kozin","relation":"artist-text-archive","confidence":"strong"}],
+      "note":"Filename provides the artist identity."
+    }
+  ]
+}
