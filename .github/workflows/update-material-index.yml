@@ -4,8 +4,12 @@ on:
     paths:
       - 'images/**'
       - 'exhibitions.json'
+      - 'materials.json'
       - 'scripts/build-material-index.mjs'
       - 'scripts/match-materials.mjs'
+      - 'material-relations.json'
+      - 'materials-home.js'
+      - 'material-relations.js'
       - '.github/workflows/update-material-index.yml'
   workflow_dispatch:
 jobs:
