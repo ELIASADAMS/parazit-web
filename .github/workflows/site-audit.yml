@@ -1,0 +1,28 @@
+name: Site dependency audit
+on:
+  push:
+    paths:
+      - '**.html'
+      - '**.js'
+      - '**.css'
+      - '**.json'
+      - 'scripts/**'
+      - '.github/workflows/**'
+  pull_request:
+    paths:
+      - '**.html'
+      - '**.js'
+      - '**.css'
+      - '**.json'
+      - 'scripts/**'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/check-site-dependencies.mjs
