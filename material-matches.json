@@ -1,0 +1,281 @@
+{
+  "version": 1,
+  "generatedAt": "2026-08-26T17:17:43.676Z",
+  "matches": [
+    {
+      "collectionId": "col-07-25-вернисаж-выставки-реди-мейдов-на-рентгена-4",
+      "title": "07.25 вернисаж выставки реди-мейдов на Рентгена 4",
+      "match": {
+        "id": "exh-readymades-2025",
+        "score": 100,
+        "reason": "explicit"
+      }
+    },
+    {
+      "collectionId": "col-10-новых-плохих-работ",
+      "title": "10 новых плохих работ",
+      "match": {
+        "id": "exh-bad-works-2015",
+        "score": 100,
+        "reason": "explicit"
+      }
+    },
+    {
+      "collectionId": "col-10-25-вернисаж-в-борее-лень-parazit-вернисаж-нии",
+      "title": "10.25 вернисаж в Борее, лень-Parazit, вернисаж - НИИ",
+      "match": null
+    },
+    {
+      "collectionId": "col-big-achive",
+      "title": "Big Achive",
+      "match": null
+    },
+    {
+      "collectionId": "col-автор-фото-борисенко-павел-андреевич-выставка-фа-соль-мажор",
+      "title": "Автор фото_ Борисенко Павел Андреевич, выставка_ Фа.Соль.Мажор!",
+      "match": null
+    },
+    {
+      "collectionId": "col-в-минорных-тонах-великий-новгород",
+      "title": "В МИНОРНЫХ ТОНАХ. ВЕЛИКИЙ НОВГОРОД",
+      "match": null
+    },
+    {
+      "collectionId": "col-выставка-пантеон-гос-музей-царскосельская-коллекция",
+      "title": "Выставка ПАНТЕОН. Гос. музей Царскосельская коллекция",
+      "match": null
+    },
+    {
+      "collectionId": "col-выставка-подделок",
+      "title": "Выставка подделок",
+      "match": null
+    },
+    {
+      "collectionId": "col-дураки-и-дуры",
+      "title": "Дураки и Дуры",
+      "match": null
+    },
+    {
+      "collectionId": "col-карусалька-или-как-мы-стали-интереснее-на-15-кцси",
+      "title": "Карусалька или как мы стали интереснее на 15_...КЦСИ",
+      "match": null
+    },
+    {
+      "collectionId": "col-манифеста-марат",
+      "title": "МАНИФЕСТА-МАРАТ",
+      "match": null
+    },
+    {
+      "collectionId": "col-нот-тупости-к-паразитизму-2012овая-папка",
+      "title": "Нот тупости к паразитизму 2012овая папка",
+      "match": null
+    },
+    {
+      "collectionId": "col-павел-ульянов",
+      "title": "ПАВЕЛ УЛЬЯНОВ",
+      "match": null
+    },
+    {
+      "collectionId": "col-паразит-в-музейх-мира-нью-йорк-2019",
+      "title": "ПАРАЗИТ В МУЗЕЙХ МИРА-НЬЮ-ЙОРК-2019",
+      "match": null
+    },
+    {
+      "collectionId": "col-паразит-у-марата-2013",
+      "title": "ПАРАЗИТ у МАРАТА 2013",
+      "match": {
+        "id": "exh-parazit-plus-2013",
+        "score": 2,
+        "reason": "name/year"
+      }
+    },
+    {
+      "collectionId": "col-паразиты-на-неве-2-15",
+      "title": "ПАРАЗИТЫ НА НЕВЕ-2-15",
+      "match": null
+    },
+    {
+      "collectionId": "col-пантеон-экспозиция",
+      "title": "Пантеон - экспозиция",
+      "match": null
+    },
+    {
+      "collectionId": "col-проклятый-академизм-нии-паразит-2025-г",
+      "title": "Проклятый академизм. НИИ ПАРАЗИТ 2025 Г_",
+      "match": {
+        "id": "exh-cursed-academicism-2025",
+        "score": 4,
+        "reason": "name/year"
+      }
+    },
+    {
+      "collectionId": "col-сosmoscow-дебютный-стенд-2025-г",
+      "title": "СOSMOSCOW дебютный стенд.2025 г_",
+      "match": {
+        "id": "fair-cosmoscow-2025",
+        "score": 3,
+        "reason": "name/year"
+      }
+    },
+    {
+      "collectionId": "col-случай-зеленая-ветка-нии-паразит-2025-г",
+      "title": "СЛУЧАЙ_ ЗЕЛЕНАЯ ВЕТКА. НИИ ПАРАЗИТ. 2025 Г_",
+      "match": {
+        "id": "exh-green-branch-2025",
+        "score": 5,
+        "reason": "name/year"
+      }
+    },
+    {
+      "collectionId": "col-фа-соль-мажор-галерея-паразит-2026-г",
+      "title": "ФА.СОЛЬ.МАЖОР. Галерея Паразит. 2026 г_",
+      "match": {
+        "id": "exh-in-minor-keys-2026",
+        "score": 3,
+        "reason": "name/year"
+      }
+    },
+    {
+      "collectionId": "col-фотоотчет-у-марата",
+      "title": "Фотоотчет у МАРАТА",
+      "match": null
+    },
+    {
+      "collectionId": "col-чужестранцы-повсюду",
+      "title": "Чужестранцы повсюду",
+      "match": null
+    },
+    {
+      "collectionId": "col-экзистенциализм-в-борее-2011",
+      "title": "ЭКЗИСТЕНЦИАЛИЗМ В БОРЕЕ 2011",
+      "match": null
+    },
+    {
+      "collectionId": "col-ярмарка-catalog-дебютный-стенд-2026-г",
+      "title": "Ярмарка CATALOG ДЕБЮТНЫЙ СТЕНД. 2026 Г_",
+      "match": {
+        "id": "fair-cosmoscow-2026",
+        "score": 3,
+        "reason": "name/year"
+      }
+    },
+    {
+      "collectionId": "col-выставка-пороги-нии-паразит-2024-г",
+      "title": "выставка ПОРОГИ. НИИ ПАРАЗИТ 2024 Г_",
+      "match": {
+        "id": "exh-thresholds-2024-2025",
+        "score": 3,
+        "reason": "name/year"
+      }
+    },
+    {
+      "collectionId": "col-конец-света",
+      "title": "конец света",
+      "match": null
+    },
+    {
+      "collectionId": "col-конец-света-и-русское-бедное",
+      "title": "конец света и русское бедное",
+      "match": null
+    },
+    {
+      "collectionId": "col-музей-москвы-2014",
+      "title": "музей москвы 2014",
+      "match": {
+        "id": "exh-venice-salvation-2014",
+        "score": 2,
+        "reason": "name/year"
+      }
+    },
+    {
+      "collectionId": "col-мыло-анна-нова",
+      "title": "мыло-анна нова",
+      "match": null
+    },
+    {
+      "collectionId": "col-ночь-галерей",
+      "title": "ночь галерей",
+      "match": null
+    },
+    {
+      "collectionId": "col-пантеон-открытие-пленка",
+      "title": "пантеон - открытие, плёнка_",
+      "match": null
+    },
+    {
+      "collectionId": "col-папка-для-каталог-паразит",
+      "title": "папка для КАТАЛОГ-ПАРАЗИТ",
+      "match": null
+    },
+    {
+      "collectionId": "col-паразит-в-музеях-мира-лувр-2016",
+      "title": "паразит в музеях мира-ЛУВР-2016",
+      "match": null
+    },
+    {
+      "collectionId": "col-паразит-формализм",
+      "title": "паразит-формализм",
+      "match": null
+    },
+    {
+      "collectionId": "col-пермь",
+      "title": "пермь",
+      "match": null
+    },
+    {
+      "collectionId": "col-пьяная-выставк100-лет-аванг-2014",
+      "title": "пьяная выставк100 лет аванг-2014",
+      "match": {
+        "id": "exh-venice-salvation-2014",
+        "score": 2,
+        "reason": "name/year"
+      }
+    },
+    {
+      "collectionId": "col-у-херста-за-пазухой",
+      "title": "у Хёрста за пазухой",
+      "match": null
+    },
+    {
+      "collectionId": "col-фото-06-25-встреча-с-новыми-тупыми-отдел-новейших-течений",
+      "title": "фото-06.25-встреча с новыми тупыми, отдел новейших течений",
+      "match": null
+    },
+    {
+      "collectionId": "col-цемента-2014",
+      "title": "цемента-2014",
+      "match": {
+        "id": "exh-cementa-2014",
+        "score": 3,
+        "reason": "name/year"
+      }
+    },
+    {
+      "collectionId": "col-черная-зависть-8-июля-2014",
+      "title": "черная зависть 8 июля 2014",
+      "match": {
+        "id": "exh-black-envy-2014",
+        "score": 4,
+        "reason": "name/year"
+      }
+    },
+    {
+      "collectionId": "col-ярмарка-fix-price-нии-паразит-2025-г",
+      "title": "ярмарка FIX PRICE. НИИ ПАРАЗИТ. 2025 Г_",
+      "match": {
+        "id": "exh-fix-price-2025",
+        "score": 4,
+        "reason": "name/year"
+      }
+    },
+    {
+      "collectionId": "col-ярмарка-контур-фото-2026-дебютные-стенды",
+      "title": "ярмарка КОНТУР. ФОТО 2026. ДЕБЮТНЫЕ СТЕНДЫ",
+      "match": {
+        "id": "fair-cosmoscow-2026",
+        "score": 3,
+        "reason": "name/year"
+      }
+    }
+  ]
+}
