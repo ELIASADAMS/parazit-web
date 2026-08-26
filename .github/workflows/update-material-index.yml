@@ -1,0 +1,29 @@
+name: Update archive material index
+on:
+  push:
+    paths:
+      - 'images/**'
+      - 'exhibitions.json'
+      - 'scripts/build-material-index.mjs'
+      - 'scripts/match-materials.mjs'
+      - '.github/workflows/update-material-index.yml'
+  workflow_dispatch:
+jobs:
+  index:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: node scripts/build-material-index.mjs
+      - run: node scripts/match-materials.mjs
+      - name: Commit generated indexes
+        run: |
+          git config user.name 'parazit-archive-bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add material-index.json material-matches.json
+          git diff --cached --quiet || git commit -m 'Update generated material indexes [skip ci]'
+          git push
