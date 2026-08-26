@@ -1,19 +1,20 @@
 document.addEventListener('DOMContentLoaded', async () => {
   try {
-    const data = await fetch('materials.json', { cache: 'no-store' }).then(r => r.json());
+    let data = null;
+    try { data = await fetch('material-index.json',{cache:'no-store'}).then(r=>r.ok?r.json():null); } catch {}
+    if (!data) data = await fetch('materials.json',{cache:'no-store'}).then(r=>r.json());
+    const collections = data.collections || data.imageCollections || [];
     const gallery = document.getElementById('galleryGrid');
-    if (gallery && data.imageCollections?.length) {
-      const strip = document.createElement('section');
-      strip.className = 'home-section';
-      strip.innerHTML = `<div class="section-title"><span>NEW.MATERIALS</span><a href="materials.html">OPEN MATERIALS →</a></div><div class="record-grid materials-home-grid"></div>`;
-      const grid = strip.querySelector('.materials-home-grid');
-      grid.innerHTML = data.imageCollections.map(item => `<a class="record-card" href="materials.html"><img class="record-image" src="${String(item.preview).replace(/&/g,'&amp;').replace(/"/g,'&quot;')}" alt="${String(item.title).replace(/&/g,'&amp;').replace(/</g,'&lt;')}" loading="lazy"><span class="record-info"><span class="record-id">MATERIAL</span><span class="record-title">${String(item.title).replace(/&/g,'&amp;').replace(/</g,'&lt;')}</span><span class="record-meta">SOURCE COLLECTION</span></span></a>`).join('');
-      document.querySelector('[data-view="gallery"]')?.after(strip);
+    const esc=s=>String(s||'').replace(/[&<>\"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','\"':'&quot;'}[c]));
+    const preview = item => item.images?.[0]?.path || item.preview || '';
+    if (collections.length) {
+      const old=document.querySelector('.materials-home-grid'); if(old?.parentElement) old.parentElement.remove();
+      const strip=document.createElement('section'); strip.className='home-section';
+      strip.innerHTML=`<div class="section-title"><span>IMAGE.ARCHIVE</span><a href="materials.html">OPEN FULL MATERIALS →</a></div><div class="record-grid materials-home-grid"></div>`;
+      const grid=strip.querySelector('.materials-home-grid');
+      grid.innerHTML=collections.map(item=>{const p=preview(item);return `<a class="record-card material-home-card" href="materials.html"><div class="material-home-image">${p?`<img class="record-image" src="${esc(p)}" alt="${esc(item.title)}" loading="lazy">`:''}</div><span class="record-info"><span class="record-id">IMAGE COLLECTION</span><span class="record-title">${esc(item.title)}</span><span class="record-meta">${item.year||''}${item.count?` · ${item.count} IMAGES`:''}</span></span></a>`}).join('');
+      if(gallery) gallery.after(strip); else document.querySelector('main')?.appendChild(strip);
     }
-    const relationScript = document.createElement('script');
-    relationScript.src = 'material-relations.js';
-    document.body.appendChild(relationScript);
-  } catch (error) {
-    console.warn('Materials layer unavailable', error);
-  }
+    const relationScript=document.createElement('script'); relationScript.src='material-relations.js'; document.body.appendChild(relationScript);
+  } catch(error){console.warn('Materials layer unavailable',error)}
 });
